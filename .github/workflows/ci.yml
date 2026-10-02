@@ -1,0 +1,54 @@
+# Inert until the repo is pushed. Runs the same commands as local.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    services:
+      # Same host ports as docker-compose.yml, so the test URLs are identical.
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: reflex
+          POSTGRES_PASSWORD: reflex
+          POSTGRES_DB: reflex
+        ports:
+          - 5433:5432
+        options: >-
+          --health-cmd "pg_isready -U reflex -d reflex"
+          --health-interval 2s
+          --health-timeout 5s
+          --health-retries 15
+      redis:
+        image: redis:7
+        ports:
+          - 6380:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 2s
+          --health-timeout 5s
+          --health-retries 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          # check:terms scans every commit message.
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - name: Create test databases
+        # Service containers can't mount docker/postgres/init.sql, so apply it here.
+        run: psql postgresql://reflex:reflex@localhost:5433/reflex -f docker/postgres/init.sql
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check
+        env:
+          FORBIDDEN_TERMS: ${{ secrets.FORBIDDEN_TERMS }}
+      - run: pnpm test:unit
+      - run: pnpm test:integration
