@@ -23,6 +23,8 @@
 # misc
 .DS_Store
 *.pem
+/docs/plans/
+/docs/research/
 
 # debug
 npm-debug.log*
