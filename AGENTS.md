@@ -17,7 +17,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 ### Issue tracker
 
-Issues and specs live as local markdown files under `.scratch/<feature>/`. See `docs/agents/issue-tracker.md`.
+Issues and specs live as local markdown files under `.scratch/<feature>/`. The Reflex build is the exception: it is tracked in one plan file, `docs/plans/reflex-implementation-plan.md`, with no ticket files. See `docs/agents/issue-tracker.md`.
 
 ### Triage labels
 

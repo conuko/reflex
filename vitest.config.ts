@@ -1,15 +1,14 @@
 import { defineConfig } from "vitest/config";
 
 // Tests never read `.env`: every variable a test can see is set here, so a test
-// can't spend model tokens or touch dev data. Keys are blanked explicitly in
-// case the shell exports them.
+// can't spend model tokens or touch dev data. The key is blanked explicitly in
+// case the shell exports it.
 const testEnv = {
   DATABASE_URL: "postgresql://reflex:reflex@localhost:5433/reflex_test",
   REDIS_URL: "redis://localhost:6380/1",
   JUDGMENT_PROVIDER: "fake",
   INTAKE_WEBHOOK_SECRET: "test-intake-webhook-secret-0123456789abcdef",
   TYPESAFE_API_KEY: "",
-  ANTHROPIC_API_KEY: "",
 };
 
 export default defineConfig({

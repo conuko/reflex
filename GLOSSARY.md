@@ -11,19 +11,23 @@ The answers a judgment provider gave to the question set for one ticket, coverin
 _Avoid_: Prediction, classification, model output
 
 **Judgment provider**:
-A source of judgments: Jev, the baseline, or a fake used in tests. Named after the model it runs (`jev`, `qwen`, `claude`), never after the vendor or the runtime.
-_Avoid_: Jev provider (for the general concept), model provider, TypeSafe provider, Ollama provider, local provider
+A source of judgments: Jev (`jev`), or a fake used in tests (`fake`). Named after the model it runs, never after the vendor.
+_Avoid_: Jev provider (for the general concept), model provider, TypeSafe provider
 
 **Jev**:
-TypeSafe's System One model, pinned to one version, and the only judgment provider used in the running app.
+TypeSafe's System One model, pinned to one version, and the only model in Reflex: in the running app, the seed and the evaluation (ADR-0003).
 _Avoid_: TypeSafe (that is the vendor, not the model)
 
 **Baseline**:
-The model Jev is compared against in evaluation, answering the same question set. For now Qwen3.5-9B, a general open model run locally; later, optionally, Claude Opus 5.5. It is never used in the running app.
-_Avoid_: Claude provider (in prose), reference model, competitor
+Plain code that answers the same eval items without a model, so each of Jev's numbers can be shown next to what code alone achieves: the majority class, frozen keyword rules, or the top full-text search candidate for duplicates. A baseline is never a model and never a judgment provider (ADR-0003).
+_Avoid_: baseline model, reference model, competitor, Qwen, Claude provider
 
 ### Issues
 
 **Issue corpus**:
 The hand-written existing issues of two fictional trackers, `librechat` and `lobehub`, each labeled with a type, an area, a priority and, for a duplicate, the issue it duplicates. It is both the set of existing issues a ticket can duplicate and the labeled data for evaluation (ADR-0002).
 _Avoid_: GitHub data, dataset, issue dump
+
+**Tracker**:
+One of the two fictional products' issue trackers, `librechat` or `lobehub`. Every issue and every workspace belongs to one tracker, and a ticket's duplicate candidates come only from its workspace's tracker.
+_Avoid_: repo, project, source (that is where an issue was imported from, such as Linear)

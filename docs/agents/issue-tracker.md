@@ -2,6 +2,8 @@
 
 Issues and specs for this repo live as markdown files in `.scratch/`.
 
+**Exception, the Reflex build:** the remaining work is tracked in one plan file, `docs/plans/reflex-implementation-plan.md`, as milestones M1 to M6 with "Done when" checks and a Log. Don't create ticket files for it. Tickets 01 to 04 in `.scratch/reflex/issues/` are kept as history.
+
 ## Conventions
 
 - One feature per directory: `.scratch/<feature-slug>/`
