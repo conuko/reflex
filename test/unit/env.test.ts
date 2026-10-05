@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 
-import { parseWebEnv, parseWorkerEnv } from "@/lib/env";
+import { parseScriptEnv, parseWebEnv, parseWorkerEnv } from "@/lib/env";
 
 const secret = "a".repeat(32);
 
@@ -102,6 +102,26 @@ describe("parseWorkerEnv", () => {
 
   it("does not require INTAKE_WEBHOOK_SECRET", () => {
     expect(() => parseWorkerEnv(worker)).not.toThrow();
+  });
+});
+
+describe("parseScriptEnv", () => {
+  it("returns only the variables the script names", () => {
+    expect(parseScriptEnv(["TYPESAFE_API_KEY"], { ...web, TYPESAFE_API_KEY: "ts-key" })).toEqual({
+      TYPESAFE_API_KEY: "ts-key",
+    });
+  });
+
+  it("names a missing variable", () => {
+    expect(() => parseScriptEnv(["TYPESAFE_API_KEY"], web)).toThrow(
+      "Missing environment variable TYPESAFE_API_KEY",
+    );
+  });
+
+  it("treats an empty value as missing", () => {
+    expect(() => parseScriptEnv(["TYPESAFE_API_KEY"], { TYPESAFE_API_KEY: "" })).toThrow(
+      "Missing environment variable TYPESAFE_API_KEY",
+    );
   });
 });
 

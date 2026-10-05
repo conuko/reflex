@@ -45,6 +45,22 @@ export function parseWorkerEnv(source: EnvSource): WorkerEnv {
   return parse(workerSchema, { JUDGMENT_PROVIDER: "jev", ...withoutBlanks(source) });
 }
 
+// CLI scripts each require only the variables they use, e.g. `jev:smoke`
+// needs TYPESAFE_API_KEY and nothing else.
+export function parseScriptEnv<const Name extends string>(
+  names: readonly Name[],
+  source: EnvSource,
+): Record<Name, string> {
+  const shape = Object.fromEntries(names.map((name) => [name, z.string()]));
+  // The schema is built from `names`, so its output has exactly those keys.
+  // oxlint-disable-next-line typescript/no-unsafe-type-assertion
+  return parse(z.object(shape), withoutBlanks(source)) as Record<Name, string>;
+}
+
+export function scriptEnv<const Name extends string>(...names: Name[]): Record<Name, string> {
+  return parseScriptEnv(names, process.env);
+}
+
 let web: WebEnv | undefined;
 let worker: WorkerEnv | undefined;
 

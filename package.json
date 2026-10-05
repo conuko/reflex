@@ -32,10 +32,11 @@
     "eval:import": "tsx scripts/pending.ts 24",
     "seed:demo": "tsx scripts/pending.ts 18",
     "demo:simulate-incident": "tsx scripts/pending.ts 21",
-    "jev:smoke": "tsx scripts/pending.ts 03"
+    "jev:smoke": "tsx --env-file-if-exists=.env scripts/jev-smoke.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
+    "@typesafe-ai/sdk": "0.6.0",
     "class-variance-authority": "^0.7.1",
     "cn": "^0.4.0",
     "lucide-react": "^1.49.0",

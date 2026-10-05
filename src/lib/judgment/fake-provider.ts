@@ -1,0 +1,91 @@
+import type { Question, Questions } from "@typesafe-ai/sdk";
+
+import { createHash } from "node:crypto";
+
+import { NON_GOALS } from "@/lib/config/non-goals";
+import { parseJudgment } from "@/lib/triage/parse-judgment";
+import { buildQuestions, QUESTION_SET_VERSION } from "@/lib/triage/questions";
+import { buildState } from "@/lib/triage/state";
+
+import type { JudgmentProvider } from "./provider";
+
+// The judgment provider for tests: no network, no key, no cost. It builds the
+// same state and questions as Jev, makes up a System One response from a hash
+// of them, and parses it like a real one. The same input always gets the same
+// judgment, and `calls` shows how many judgments were asked for.
+
+export type FakeProvider = JudgmentProvider & { readonly calls: number };
+
+export function createFakeProvider(): FakeProvider {
+  let calls = 0;
+
+  return {
+    id: "fake",
+    get calls() {
+      return calls;
+    },
+    async judge({ ticket, candidates }) {
+      calls++;
+      const state = buildState(ticket);
+      const { questions, candidateMap } = buildQuestions({ candidates, nonGoals: NON_GOALS });
+      const digest = createHash("sha256").update(JSON.stringify({ state, candidateMap })).digest();
+      const { model, answers, usage } = parseJudgment(fakeResponse(questions, digest), {
+        candidateMap,
+        nonGoals: NON_GOALS,
+      });
+
+      return {
+        provider: "fake",
+        model,
+        requestId: `fake-${digest.toString("hex", 0, 8)}`,
+        questionSetVersion: QUESTION_SET_VERSION,
+        messageCount: ticket.messages.length,
+        state,
+        candidateMap,
+        answers,
+        usage,
+      };
+    },
+  };
+}
+
+function fakeResponse(questions: Questions, digest: Buffer) {
+  let index = 0;
+  // Successive digest bytes as numbers in [0, 1].
+  const next = () => (digest[index++ % digest.length] ?? 0) / 255;
+  const answers = Object.fromEntries(
+    Object.entries(questions).map(([id, question]) => [id, fakeAnswer(question, next)]),
+  );
+  return { model: "fake", answers, usage: { input_tokens: 0, output_tokens: 0 } };
+}
+
+function fakeAnswer(question: Question, next: () => number) {
+  if (question.type === "noul") return { type: "noul", noul: next() };
+
+  if (question.type === "choice") {
+    const labels = Object.keys(question.criteria);
+    const chosen = labels[pick(next(), labels.length)];
+    const top = 0.5 + next() / 2;
+    const rest = (1 - top) / Math.max(labels.length - 1, 1);
+    return {
+      type: "choice",
+      choice: chosen,
+      probabilities: Object.fromEntries(
+        labels.map((label) => [label, label === chosen ? top : rest]),
+      ),
+    };
+  }
+
+  const level = pick(next(), question.criteria.length);
+  return {
+    type: "score",
+    score: level,
+    probabilities: Object.fromEntries(
+      question.criteria.map((_, i) => [String(i), i === level ? 1 : 0]),
+    ),
+  };
+}
+
+function pick(random: number, count: number): number {
+  return Math.min(Math.floor(random * count), count - 1);
+}
