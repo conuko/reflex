@@ -1,0 +1,1666 @@
+{
+  "set": "support",
+  "note": "Hand-written, fictional B2B support tickets for the eval (plan M1). Gold labels were written before any model run. support-01 to support-25 each report an existing issue of their tracker (duplicateOf); support-26 to support-60 duplicate nothing.",
+  "tickets": [
+    {
+      "id": "support-01",
+      "tracker": "librechat",
+      "createdAt": "2026-09-28T08:12:00Z",
+      "subject": "Our contract scans never become searchable",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Hi,\n\nwe moved our signed agreements (the ones clients send back as scans from their copier) into a library folder for our legal assistant. Two days later the assistant still says it can't find anything in them, and every one of those files still has the spinning status next to it. The agreements we created digitally and saved as PDF were usable within minutes.\n\nOur paralegal has started retyping the key clauses into a text file so the assistant can at least find those, but that won't scale to 300 agreements. Is there something we need to switch on?"
+        }
+      ],
+      "gold": {
+        "type": "bug",
+        "area": "knowledge_library",
+        "priority": "medium",
+        "reach": "one_team",
+        "blocked": false,
+        "workaround": true,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": "librechat#2104",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-02",
+      "tracker": "librechat",
+      "createdAt": "2026-09-28T09:40:00Z",
+      "subject": "Custom model answers cut off at about 4,000 tokens even with max output set to 16k",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "We use our own model through the OpenAI-compatible custom model option. 'Max output tokens' is set to 16000 in the model config, but every long answer stops at around 4,000 tokens with finish_reason 'length'. Our proxy shows the request goes out with max_tokens 4096."
+        },
+        {
+          "from": "support",
+          "text": "Thanks for the details. Could you tell us the workspace and model name, and whether it also happens in agents or only in chat?"
+        },
+        {
+          "from": "customer",
+          "text": "Workspace ws_7d21, model 'lexa-32k'. It happens in chat and in both agents that use this model. Our analysts work around it by typing 'continue', but the generated reports then come out split in two."
+        }
+      ],
+      "gold": {
+        "type": "bug",
+        "area": "models",
+        "priority": "medium",
+        "reach": "one_team",
+        "blocked": false,
+        "workaround": true,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": "librechat#2125",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-03",
+      "tracker": "librechat",
+      "createdAt": "2026-09-28T11:05:00Z",
+      "subject": "Seats still billed for people we offboarded in Okta",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Every month we remove leavers in Okta and the SCIM push reports success, but in Admin > People those users still show as Active and we keep paying for their seats. Right now there are 14 of them.\n\nThey can't log in (Okta blocks them), so it's not a security problem, but finance keeps asking why our seat count never goes down. We deactivate them by hand whenever we notice."
+        }
+      ],
+      "gold": {
+        "type": "bug",
+        "area": "admin_sso",
+        "priority": "medium",
+        "reach": "one_team",
+        "blocked": false,
+        "workaround": true,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": "librechat#2127",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-04",
+      "tracker": "librechat",
+      "createdAt": "2026-09-29T07:55:00Z",
+      "subject": "Two days of edits to our onboarding automation vanished",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Something ate our work. Yesterday afternoon I spent hours reworking our 'New supplier onboarding' automation: a new branch for foreign suppliers, three new prompts and the lookup in our ERP. The confirmation popped up, all good.\n\nThis morning it's the version from the start of September again, and the history list shows nothing after that. My colleague's changes from last Thursday are gone too. This is the second automation on our ops team this has happened to, and we're now scared to touch anything. Can you recover the lost version?"
+        }
+      ],
+      "gold": {
+        "type": "bug",
+        "area": "workflows",
+        "priority": "high",
+        "reach": "one_team",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": true,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": "librechat#2137",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-05",
+      "tracker": "librechat",
+      "createdAt": "2026-09-29T09:20:00Z",
+      "subject": "Feature request: approval step in workflows",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "We'd like a workflow step that pauses the run until a manager approves it. Our use case: a workflow drafts purchase orders from supplier emails, and anything over 10,000 EUR needs sign-off before it goes out. Today we split it into two workflows and pass the draft along by hand.\n\nAn approval step that notifies the approver and has approve and reject buttons would solve it."
+        }
+      ],
+      "gold": {
+        "type": "feature_request",
+        "area": "workflows",
+        "priority": "medium",
+        "reach": "one_team",
+        "blocked": false,
+        "workaround": true,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": "librechat#2102",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-06",
+      "tracker": "librechat",
+      "createdAt": "2026-09-29T10:45:00Z",
+      "subject": "Can a person check the draft before it goes out?",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Quick one: our automation writes answers to customer complaints and emails them out. Legal now wants a person to look at each answer before it leaves the building. Is there any way to make the automation stop and wait until someone says OK, and only then send the email?"
+        }
+      ],
+      "gold": {
+        "type": "question",
+        "area": "workflows",
+        "priority": "low",
+        "reach": "not_stated",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": "librechat#2102",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-07",
+      "tracker": "librechat",
+      "createdAt": "2026-09-29T13:10:00Z",
+      "subject": "Combine two agents into one",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "We have a 'Policy lookup' agent and a 'Claims calculator' agent, and both work great on their own. Our adjusters now want one assistant that can use both.\n\nCould you let an agent use another agent as one of its tools, so the main agent hands off a sub-task and gets the answer back? Copying all instructions and tools into one giant agent is what we do now, and it's a maintenance nightmare."
+        }
+      ],
+      "gold": {
+        "type": "feature_request",
+        "area": "agents",
+        "priority": "medium",
+        "reach": "one_team",
+        "blocked": false,
+        "workaround": true,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": "librechat#2111",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-08",
+      "tracker": "librechat",
+      "createdAt": "2026-09-30T08:30:00Z",
+      "subject": "Security review: we need your admin events in Sentinel",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Our security operations center pulls activity from every SaaS tool into Microsoft Sentinel. For your platform they need sign-ins, role changes, key creation and exports delivered automatically, within minutes. Downloading a spreadsheet from the admin pages once a week doesn't pass our vendor review.\n\nIs there a push or connector option, or can you build one? Our renewal decision depends on it."
+        }
+      ],
+      "gold": {
+        "type": "feature_request",
+        "area": "admin_sso",
+        "priority": "medium",
+        "reach": "not_stated",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": "librechat#2120",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-09",
+      "tracker": "librechat",
+      "createdAt": "2026-09-30T09:15:00Z",
+      "subject": "Please build an iOS and Android app",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Our 120 site inspectors work only from their phones. The web app in the phone browser is clunky: they lose the tab, have to sign in again, and get no notification when the agent is done.\n\nWe need a native app from the App Store and Google Play that we can roll out through Intune."
+        }
+      ],
+      "gold": {
+        "type": "feature_request",
+        "area": "chat",
+        "priority": "low",
+        "reach": "one_team",
+        "blocked": false,
+        "workaround": true,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": "native_mobile_apps",
+        "injection": false,
+        "duplicateOf": "librechat#2126",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-10",
+      "tracker": "librechat",
+      "createdAt": "2026-09-30T11:40:00Z",
+      "subject": "Retention: we must keep every AI conversation for 10 years",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Hello,\n\nthe compliance department of our insurance group says all employee conversations with the assistant are business records and have to go into our records system (our archiving vendor ingests through an API). Doing it chat by chat in the browser is impossible for 1,500 people.\n\nIs there a way for our archive to pull all conversations programmatically, with timestamps and who or what answered? If not, please treat this as a formal request."
+        }
+      ],
+      "gold": {
+        "type": "feature_request",
+        "area": "api",
+        "priority": "medium",
+        "reach": "whole_workspace",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": "librechat#2132",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-11",
+      "tracker": "librechat",
+      "createdAt": "2026-09-30T14:05:00Z",
+      "subject": "Generate images for our social posts",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Our content team writes all our LinkedIn posts with the assistant. Could you add a model that makes the matching images too? Something like 'create a banner for this post in our brand colours', and you get a picture back. Right now they jump to another tool for every visual."
+        }
+      ],
+      "gold": {
+        "type": "feature_request",
+        "area": "models",
+        "priority": "low",
+        "reach": "one_team",
+        "blocked": false,
+        "workaround": true,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": "media_generation",
+        "injection": false,
+        "duplicateOf": "librechat#2135",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-12",
+      "tracker": "librechat",
+      "createdAt": "2026-10-01T08:00:00Z",
+      "subject": "Running it inside our own racks",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "We're a hospital network. Our regulator won't let patient-related text leave our premises, so only administrative staff can use the cloud workspace. Clinical staff want the same assistants.\n\nWe need a version we can install and operate on our own hardware, with no connection to the outside world, using models we host ourselves. We'd pay for a license. What would it take?"
+        }
+      ],
+      "gold": {
+        "type": "feature_request",
+        "area": "other",
+        "priority": "low",
+        "reach": "one_team",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": "self_hosting",
+        "injection": false,
+        "duplicateOf": "librechat#2110",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-13",
+      "tracker": "librechat",
+      "createdAt": "2026-10-01T10:30:00Z",
+      "subject": "Share an agent with a group instead of one person at a time",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "I made an agent for our finance team and want only the Finance group (synced from Entra ID) to see it. The share dialog only lets me add individual people or make the agent available to everyone. Is there a way to share it with a group, so new team members get access automatically?"
+        }
+      ],
+      "gold": {
+        "type": "question",
+        "area": "agents",
+        "priority": "low",
+        "reach": "not_stated",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": "librechat#2118",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-14",
+      "tracker": "lobehub",
+      "createdAt": "2026-09-28T10:20:00Z",
+      "subject": "Old chats are empty since the desktop app update",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Since the desktop app updated itself to 3.6.0 on Monday, every chat I have from before the summer shows only its title. Opening one shows an empty page, no messages. Same in the browser. Newer chats are fine.\n\nTwo colleagues on my team have the same problem now. Please tell me the messages are not gone."
+        }
+      ],
+      "gold": {
+        "type": "bug",
+        "area": "chat",
+        "priority": "high",
+        "reach": "one_team",
+        "blocked": false,
+        "workaround": false,
+        "regression": true,
+        "dataExposure": false,
+        "dataLoss": true,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": "lobehub#4238",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-15",
+      "tracker": "lobehub",
+      "createdAt": "2026-09-28T13:00:00Z",
+      "subject": "Duplicate internal notes on our helpdesk tickets",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Our summary automation adds an internal note to each new helpdesk ticket. Every now and then a ticket gets the same note twice. In the activity list I can see the automation started twice, a couple of seconds apart, for one incoming event, although our helpdesk says it called you only once. The automations on a timer never do this.\n\nWe added a check at the start that skips tickets that already have a note. That stops the doubles, but we still pay for the extra runs."
+        }
+      ],
+      "gold": {
+        "type": "bug",
+        "area": "workflows",
+        "priority": "low",
+        "reach": "one_team",
+        "blocked": false,
+        "workaround": true,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": "lobehub#4240",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-16",
+      "tracker": "lobehub",
+      "createdAt": "2026-09-29T08:45:00Z",
+      "subject": "An offboarded employee still had access for days",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "An employee left on Friday and we deactivated her in Okta right away. The Members page showed her as deactivated within minutes. But on Monday our audit log showed her personal API key was still making calls, and her desktop app session kept working all weekend, including access to her old team's collections.\n\nThat's a serious problem for us. Deactivation has to end sessions and revoke keys immediately."
+        }
+      ],
+      "gold": {
+        "type": "bug",
+        "area": "admin_sso",
+        "priority": "high",
+        "reach": "whole_workspace",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": true,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": "lobehub#4229",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-17",
+      "tracker": "lobehub",
+      "createdAt": "2026-09-29T11:15:00Z",
+      "subject": "Slack connect fails with invalid_state",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "I'm trying to connect a second Slack workspace on the Integrations page. After I click Allow in Slack, I land back in the app with 'Slack authorization failed: invalid_state'. I've tried several times and in two browsers. Our first Slack workspace is still connected and works. I'm an admin on both sides."
+        }
+      ],
+      "gold": {
+        "type": "bug",
+        "area": "integrations",
+        "priority": "medium",
+        "reach": "one_user",
+        "blocked": true,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": "lobehub#4217",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-18",
+      "tracker": "lobehub",
+      "createdAt": "2026-09-29T14:30:00Z",
+      "subject": "Our people live in Microsoft's chat app now",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "After our merger, everyone moved off Slack. The people who used to ping the agents in Slack now have to open a browser tab instead, and they simply don't. We'd love to talk to the agents from inside Teams channels and chats, the same way the Slack connection works, rolled out centrally by IT."
+        }
+      ],
+      "gold": {
+        "type": "feature_request",
+        "area": "integrations",
+        "priority": "medium",
+        "reach": "whole_workspace",
+        "blocked": false,
+        "workaround": true,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": "lobehub#4228",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-19",
+      "tracker": "lobehub",
+      "createdAt": "2026-09-30T09:00:00Z",
+      "subject": "Run a workflow every 10 minutes during office hours",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "The schedule trigger only goes down to hourly. We need a workflow to run every 10 minutes, Monday to Friday, 8 to 6. We currently keep six copies of the same workflow, offset by 10 minutes each, which is a pain to maintain. A cron field would be perfect."
+        }
+      ],
+      "gold": {
+        "type": "feature_request",
+        "area": "workflows",
+        "priority": "medium",
+        "reach": "one_team",
+        "blocked": false,
+        "workaround": true,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": "lobehub#4235",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-20",
+      "tracker": "lobehub",
+      "createdAt": "2026-09-30T10:50:00Z",
+      "subject": "Keep the salary documents away from everyone else",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "We want to upload our compensation guidelines so managers can ask the assistant about them. But as far as we can tell, anything we upload is available to every person in the company, and anyone can plug it into their own assistant.\n\nIs there a way to limit who can use particular uploads? If not, we need it before we can add anything confidential."
+        }
+      ],
+      "gold": {
+        "type": "feature_request",
+        "area": "knowledge_library",
+        "priority": "medium",
+        "reach": "not_stated",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": "lobehub#4231",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-21",
+      "tracker": "lobehub",
+      "createdAt": "2026-09-30T15:20:00Z",
+      "subject": "Export a chat as PDF or Markdown",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Can you add an export option to the chat menu? Our analysts need to paste results into client reports, and copying message by message breaks the tables and code blocks. Markdown and PDF would both be great."
+        }
+      ],
+      "gold": {
+        "type": "feature_request",
+        "area": "chat",
+        "priority": "low",
+        "reach": "one_team",
+        "blocked": false,
+        "workaround": true,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": "lobehub#4205",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-22",
+      "tracker": "lobehub",
+      "createdAt": "2026-10-01T09:10:00Z",
+      "subject": "Image generation model in the model picker",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Please add an image generation model, so our marketing team can create visuals in the same chat where they write the copy. They'd ask for a 1080x1080 banner and get a PNG back."
+        }
+      ],
+      "gold": {
+        "type": "feature_request",
+        "area": "models",
+        "priority": "low",
+        "reach": "one_team",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": "media_generation",
+        "injection": false,
+        "duplicateOf": "lobehub#4233",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-23",
+      "tracker": "lobehub",
+      "createdAt": "2026-10-01T11:25:00Z",
+      "subject": "Is there a self-hosted version?",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "We're a credit union, and our security policy says member data can't be processed outside our own data center. Do you offer a version we can install on our own Kubernetes cluster, ideally one that runs without internet access?"
+        }
+      ],
+      "gold": {
+        "type": "question",
+        "area": "other",
+        "priority": "low",
+        "reach": "not_stated",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": "self_hosting",
+        "injection": false,
+        "duplicateOf": "lobehub#4210",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-24",
+      "tracker": "lobehub",
+      "createdAt": "2026-10-01T14:40:00Z",
+      "subject": "Anything for our technicians' phones?",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Our maintenance crews are at customer sites all day with nothing but a company phone. Will there be something they can install from the app store, with a notification when the assistant has an answer? The browser version works, but they hate it."
+        }
+      ],
+      "gold": {
+        "type": "question",
+        "area": "chat",
+        "priority": "low",
+        "reach": "one_team",
+        "blocked": false,
+        "workaround": true,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": "native_mobile_apps",
+        "injection": false,
+        "duplicateOf": "lobehub#4218",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-25",
+      "tracker": "lobehub",
+      "createdAt": "2026-10-02T08:35:00Z",
+      "subject": "The assistant stops following my rules after a while",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "When I work with the assistant for a long session, it eventually ignores what I told it at the start (formal tone, never mention prices). If I remind it, it's fine again. Is there a limit to how much it remembers? Would it help to put the rules somewhere permanent?"
+        }
+      ],
+      "gold": {
+        "type": "question",
+        "area": "models",
+        "priority": "low",
+        "reach": "one_user",
+        "blocked": false,
+        "workaround": true,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": "lobehub#4226",
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-26",
+      "tracker": "librechat",
+      "createdAt": "2026-10-02T07:20:00Z",
+      "subject": "Nobody can sign in after we rotated our SAML certificate",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "This morning our identity team rotated the signing certificate in our IdP and uploaded the new certificate under Admin > SSO. Since then every sign-in fails with 'SAML response signature is invalid'. Nobody in the company (about 400 people) can get in. It worked fine for two years before the rotation."
+        },
+        {
+          "from": "support",
+          "text": "Sorry about this. Can you confirm you uploaded the certificate in PEM format, and send us the time of one failed attempt?"
+        },
+        {
+          "from": "customer",
+          "text": "Yes, PEM, and the fingerprint shown on your admin page matches the one in our IdP. One failed attempt was at 07:42 UTC, user j.berg. We also tried switching back to the old certificate on your admin page, but the IdP no longer signs with it, so that doesn't help. We're completely stuck."
+        }
+      ],
+      "gold": {
+        "type": "bug",
+        "area": "admin_sso",
+        "priority": "high",
+        "reach": "whole_workspace",
+        "blocked": true,
+        "workaround": false,
+        "regression": true,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-27",
+      "tracker": "lobehub",
+      "createdAt": "2026-10-02T09:30:00Z",
+      "subject": "Audit log shows the wrong person for API actions",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "In the audit log, actions done with our service API key (creating agents, deleting documents) are shown as if Maria from our IT team did them. Maria created the key, but she didn't do those actions. For our quarterly access review we need to tell people and integrations apart. Not urgent, but it makes the log hard to trust."
+        }
+      ],
+      "gold": {
+        "type": "bug",
+        "area": "admin_sso",
+        "priority": "low",
+        "reach": "one_team",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-28",
+      "tracker": "librechat",
+      "createdAt": "2026-10-02T10:15:00Z",
+      "subject": "How do we turn off password logins?",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "We've set up SSO with Google Workspace and it works. Some people still sign in with the email and password they had from before. How do we force everyone through SSO and switch off password login completely?"
+        }
+      ],
+      "gold": {
+        "type": "question",
+        "area": "admin_sso",
+        "priority": "low",
+        "reach": "not_stated",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-29",
+      "tracker": "lobehub",
+      "createdAt": "2026-10-02T11:00:00Z",
+      "subject": "Charged twice for October",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Our company card was charged twice for the October subscription, same amount, same day. Please refund one of the charges."
+        },
+        {
+          "from": "support",
+          "text": "Thanks for letting us know. Could you send the last four digits of the card and the two transaction references?"
+        },
+        {
+          "from": "customer",
+          "text": "Card ending in 4471. References TXN-88213 and TXN-88214, both 1,240.00 EUR on October 1."
+        }
+      ],
+      "gold": {
+        "type": "account_billing",
+        "area": "other",
+        "priority": "medium",
+        "reach": "not_stated",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-30",
+      "tracker": "librechat",
+      "createdAt": "2026-10-02T13:45:00Z",
+      "subject": "Refund for seats we no longer use",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "We went from 80 to 55 users in August after a reorganization and removed the 25 accounts. We're on an annual plan until March. Can we get a refund or a credit for the 25 unused seats for the rest of the term?"
+        }
+      ],
+      "gold": {
+        "type": "account_billing",
+        "area": "other",
+        "priority": "low",
+        "reach": "not_stated",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-31",
+      "tracker": "lobehub",
+      "createdAt": "2026-10-02T15:10:00Z",
+      "subject": "Our card expires before the renewal. How do we update it?",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "The card on file expires at the end of this month and our renewal is on the 3rd. I can't find where to change the payment method, and I really don't want the workspace to be suspended over this. Where do I update it?"
+        }
+      ],
+      "gold": {
+        "type": "account_billing",
+        "area": "other",
+        "priority": "low",
+        "reach": "not_stated",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-32",
+      "tracker": "librechat",
+      "createdAt": "2026-10-03T08:05:00Z",
+      "subject": "Invoices in EUR instead of USD",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "We're a German company and our accounting needs invoices in euros. All invoices so far were in US dollars. Can you switch our billing currency to EUR starting with the next invoice?"
+        }
+      ],
+      "gold": {
+        "type": "account_billing",
+        "area": "other",
+        "priority": "low",
+        "reach": "not_stated",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-33",
+      "tracker": "lobehub",
+      "createdAt": "2026-10-03T09:25:00Z",
+      "subject": "Cancelling at the end of the month",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "We've decided not to continue and want to cancel our subscription at the end of October. Before that, we need to be sure we can export our agents' instructions and our uploaded documents. Please confirm the cancellation date and tell us how to get our data out."
+        }
+      ],
+      "gold": {
+        "type": "account_billing",
+        "area": "other",
+        "priority": "low",
+        "reach": "not_stated",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-34",
+      "tracker": "librechat",
+      "createdAt": "2026-10-03T10:40:00Z",
+      "subject": "Everyone can read other people's conversations with our shared agent",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "We shared our 'HR helper' agent with the whole company last week. Today an employee told us that under the agent's 'Recent conversations' tab she can see other employees' chats with it, including someone asking about sick leave and someone asking about a salary dispute.\n\nI checked with two test accounts and it's true: every user of a shared agent sees every conversation anyone had with it. We've unshared the agent for now."
+        }
+      ],
+      "gold": {
+        "type": "bug",
+        "area": "agents",
+        "priority": "high",
+        "reach": "whole_workspace",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": true,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-35",
+      "tracker": "lobehub",
+      "createdAt": "2026-10-03T11:50:00Z",
+      "subject": "The API returned a conversation that isn't ours",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Our nightly job calls GET /v1/conversations/{id} for conversations our integration created. Last night one call returned a conversation whose messages clearly belong to a different company: a law firm's chat about a lease agreement, with names in it. The id was ours, the content wasn't.\n\nWe've paused the job and can send the request id privately. You probably need to check whether our data is being shown to others too."
+        }
+      ],
+      "gold": {
+        "type": "bug",
+        "area": "api",
+        "priority": "high",
+        "reach": "multiple_customers",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": true,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-36",
+      "tracker": "librechat",
+      "createdAt": "2026-10-03T13:20:00Z",
+      "subject": "Slack bot used a private DM in its answer in a public channel",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "In #general someone asked our agent bot about the office move, and the bot's answer included details from a private DM another employee had with the bot an hour earlier, including her home address. The answer appeared in the right channel, but it used content from someone else's private conversation.\n\nWe've removed the message and disabled the bot."
+        }
+      ],
+      "gold": {
+        "type": "bug",
+        "area": "integrations",
+        "priority": "high",
+        "reach": "whole_workspace",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": true,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-37",
+      "tracker": "lobehub",
+      "createdAt": "2026-10-03T14:35:00Z",
+      "subject": "Audit log export contains other companies' email addresses",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "I exported last month's audit log as CSV from the admin pages. About a third of the rows are sign-ins by people with email domains we don't recognize, from what look like several other companies. None of these people are members of our workspace.\n\nEither they got into our workspace, or the export mixes in other customers' data. Which is it?"
+        }
+      ],
+      "gold": {
+        "type": "bug",
+        "area": "admin_sso",
+        "priority": "high",
+        "reach": "multiple_customers",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": true,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-38",
+      "tracker": "librechat",
+      "createdAt": "2026-10-03T15:50:00Z",
+      "subject": "Collection shows 0 documents after renaming it",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "I renamed our 'Product specs' collection to 'Product specs 2026', and now it shows 0 documents. There were around 240 files in it. Our support agent that uses this collection now answers 'I couldn't find anything' to every question."
+        },
+        {
+          "from": "support",
+          "text": "Thanks. Did the documents move to another collection, or are they missing from search entirely?"
+        },
+        {
+          "from": "customer",
+          "text": "They're missing everywhere. Search across the whole library finds none of them, and renaming the collection back didn't bring them back. The support team can't use the agent at all right now."
+        }
+      ],
+      "gold": {
+        "type": "bug",
+        "area": "knowledge_library",
+        "priority": "high",
+        "reach": "one_team",
+        "blocked": true,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": true,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-39",
+      "tracker": "lobehub",
+      "createdAt": "2026-10-04T08:10:00Z",
+      "subject": "Workflow run history before September 20 is gone",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "We need the run history of our invoice approval workflows for an audit next week. In six workflows, every run before September 20 has disappeared; the list simply starts on the 20th. We didn't delete anything, and our plan says 12 months of history. The auditors need the runs from Q3."
+        }
+      ],
+      "gold": {
+        "type": "bug",
+        "area": "workflows",
+        "priority": "high",
+        "reach": "one_team",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": true,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-40",
+      "tracker": "librechat",
+      "createdAt": "2026-10-04T09:00:00Z",
+      "subject": "Chats disappear when I drag them into a folder",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "When I drag a chat from the sidebar into one of my folders, it disappears completely: it's not in the folder, not in the sidebar, and search can't find it. It happened to three chats today, including a long one with research notes I needed. Creating new chats works. I'm afraid to move anything now."
+        }
+      ],
+      "gold": {
+        "type": "bug",
+        "area": "chat",
+        "priority": "high",
+        "reach": "one_user",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": true,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-41",
+      "tracker": "lobehub",
+      "createdAt": "2026-10-04T09:45:00Z",
+      "subject": "Can other customers ever see our documents?",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Our security officer asked me to confirm in writing: can documents we upload to the knowledge library ever be seen by users at other companies, or be used to answer their questions? Nothing has happened, we just need this for our risk register."
+        }
+      ],
+      "gold": {
+        "type": "question",
+        "area": "knowledge_library",
+        "priority": "low",
+        "reach": "not_stated",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-42",
+      "tracker": "librechat",
+      "createdAt": "2026-10-04T10:30:00Z",
+      "subject": "Can our workspace stay in the EU?",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Before we sign, our legal team wants to know whether our workspace data can be stored and processed only in EU data centers. Is region selection available on the Enterprise plan?"
+        }
+      ],
+      "gold": {
+        "type": "question",
+        "area": "other",
+        "priority": "low",
+        "reach": "not_stated",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-43",
+      "tracker": "lobehub",
+      "createdAt": "2026-10-04T11:15:00Z",
+      "subject": "The chat page is broken on phones",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "On my iPhone in Safari, the message box covers the last answer and the send button is cut off, so I have to turn the phone sideways to send anything. This started with the new chat layout last week. On a laptop everything is fine."
+        }
+      ],
+      "gold": {
+        "type": "bug",
+        "area": "chat",
+        "priority": "low",
+        "reach": "one_user",
+        "blocked": false,
+        "workaround": true,
+        "regression": true,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-44",
+      "tracker": "librechat",
+      "createdAt": "2026-10-04T12:00:00Z",
+      "subject": "Can an agent look at photos of damaged goods?",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Our returns team gets photos of damaged parcels. Can an agent look at an uploaded photo and describe the damage, so we can fill in the claim form faster? We don't need it to create any images, just to read them."
+        }
+      ],
+      "gold": {
+        "type": "question",
+        "area": "agents",
+        "priority": "low",
+        "reach": "not_stated",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-45",
+      "tracker": "lobehub",
+      "createdAt": "2026-10-04T13:20:00Z",
+      "subject": "Why did my upload fail the first time?",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "I uploaded a 40 MB slide deck to a collection and got 'Upload failed' at about 90%. I tried again and it worked; the file is there and searchable. I'm just curious whether there's a size limit I should know about, so my team doesn't run into it."
+        }
+      ],
+      "gold": {
+        "type": "question",
+        "area": "knowledge_library",
+        "priority": "low",
+        "reach": "one_user",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-46",
+      "tracker": "librechat",
+      "createdAt": "2026-10-04T14:10:00Z",
+      "subject": "Turn our scripts into voice-over audio",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Our training team writes video scripts with a workflow. Could the workflow also produce the narration as an audio file, ideally in our trainer's own voice? That would save us booking a studio every time."
+        }
+      ],
+      "gold": {
+        "type": "feature_request",
+        "area": "workflows",
+        "priority": "low",
+        "reach": "one_team",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": "media_generation",
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-47",
+      "tracker": "lobehub",
+      "createdAt": "2026-10-04T15:00:00Z",
+      "subject": "HTTP tool sends the Authorization header twice",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Our agent calls our internal inventory API through the HTTP request tool. Since we added the bearer token in the tool's auth settings, every call fails with a 400 from our API. Our API logs show the request arrives with two Authorization headers."
+        },
+        {
+          "from": "support",
+          "text": "Do you also set an Authorization header in the tool's custom headers?"
+        },
+        {
+          "from": "customer",
+          "text": "No, only in the auth settings. For now we route the calls through a small proxy that drops the duplicate header. That works, but it's one more thing for us to run."
+        }
+      ],
+      "gold": {
+        "type": "bug",
+        "area": "agents",
+        "priority": "medium",
+        "reach": "one_team",
+        "blocked": false,
+        "workaround": true,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-48",
+      "tracker": "librechat",
+      "createdAt": "2026-10-04T15:40:00Z",
+      "subject": "Agent answers in English although it's told to use German",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Our customer service agent has the instruction 'Always answer in German' and followed it for months. Since Tuesday about half of its answers come back in English, even when the customer writes in German. Nothing in the agent was changed. Our support team now rewrites those answers by hand before sending them."
+        }
+      ],
+      "gold": {
+        "type": "bug",
+        "area": "agents",
+        "priority": "medium",
+        "reach": "one_team",
+        "blocked": false,
+        "workaround": true,
+        "regression": true,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-49",
+      "tracker": "lobehub",
+      "createdAt": "2026-10-05T07:30:00Z",
+      "subject": "Send email step fails with more than 50 recipients",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Our weekly digest workflow fails at the 'Send email' step with 'recipient list too long', ever since our distribution list passed 50 people. Splitting the list across two steps works, so it's not urgent, but is 50 a documented limit?"
+        }
+      ],
+      "gold": {
+        "type": "bug",
+        "area": "workflows",
+        "priority": "low",
+        "reach": "one_team",
+        "blocked": false,
+        "workaround": true,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-50",
+      "tracker": "librechat",
+      "createdAt": "2026-10-05T08:15:00Z",
+      "subject": "Notion import stops at 100 pages",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "We connected our Notion workspace so our agents can use the company wiki. Only the first 100 pages were imported; the other 700 or so are missing, and the sync status says 'Complete'. Reconnecting gives us the same 100 pages."
+        }
+      ],
+      "gold": {
+        "type": "bug",
+        "area": "integrations",
+        "priority": "medium",
+        "reach": "not_stated",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-51",
+      "tracker": "lobehub",
+      "createdAt": "2026-10-05T08:50:00Z",
+      "subject": "Streaming responses never send the final event",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Since yesterday evening, streamed responses from the chat endpoint never end with the final [DONE] event. Our SDK waits 60 seconds before it gives up, so every answer in our customer-facing app shows up a minute late. Non-streaming calls are fine. Our own customers are noticing."
+        }
+      ],
+      "gold": {
+        "type": "bug",
+        "area": "api",
+        "priority": "high",
+        "reach": "multiple_customers",
+        "blocked": false,
+        "workaround": false,
+        "regression": true,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-52",
+      "tracker": "librechat",
+      "createdAt": "2026-10-05T09:20:00Z",
+      "subject": "Is the platform down?",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "The web app shows a blank page, and the sign-in page returns 'Service Unavailable'. Nobody in our company can get in, and two partner companies we work with say the same. It started about 20 minutes ago."
+        }
+      ],
+      "gold": {
+        "type": "bug",
+        "area": "other",
+        "priority": "high",
+        "reach": "multiple_customers",
+        "blocked": true,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-53",
+      "tracker": "lobehub",
+      "createdAt": "2026-10-05T09:40:00Z",
+      "subject": "Can a workflow reach an API inside our network?",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "We'd like a workflow step to call our order system's API, which is only reachable inside our corporate network. Is there a way to allowlist your IP addresses, or some kind of connector we can run inside our network?"
+        }
+      ],
+      "gold": {
+        "type": "question",
+        "area": "workflows",
+        "priority": "low",
+        "reach": "not_stated",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-54",
+      "tracker": "librechat",
+      "createdAt": "2026-10-05T10:05:00Z",
+      "subject": "Usage per team for last month",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Finance wants to split the cost of our workspace across departments. Where can I see how much each team used last month, ideally as a download?"
+        }
+      ],
+      "gold": {
+        "type": "question",
+        "area": "admin_sso",
+        "priority": "low",
+        "reach": "not_stated",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-55",
+      "tracker": "lobehub",
+      "createdAt": "2026-10-05T10:30:00Z",
+      "subject": "Do you train models on our chats?",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Our works council asked whether our employees' chats or uploaded documents are used to train any models, either yours or a model provider's. Can you point me to where this is documented?"
+        }
+      ],
+      "gold": {
+        "type": "question",
+        "area": "other",
+        "priority": "low",
+        "reach": "not_stated",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-56",
+      "tracker": "librechat",
+      "createdAt": "2026-10-05T10:50:00Z",
+      "subject": "Retry failed workflow steps automatically",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "When a step in one of our workflows fails because a third-party API times out, the whole run fails and someone has to rerun it by hand. Could you add a retry setting per step, like 'retry 3 times, 1 minute apart'?"
+        }
+      ],
+      "gold": {
+        "type": "feature_request",
+        "area": "workflows",
+        "priority": "medium",
+        "reach": "one_team",
+        "blocked": false,
+        "workaround": true,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-57",
+      "tracker": "lobehub",
+      "createdAt": "2026-10-05T11:10:00Z",
+      "subject": "Folders inside a collection",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Our policies collection has grown to 600 documents. It would help a lot to organize them into folders inside the collection, and to let agents search only certain folders."
+        }
+      ],
+      "gold": {
+        "type": "feature_request",
+        "area": "knowledge_library",
+        "priority": "low",
+        "reach": "not_stated",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-58",
+      "tracker": "librechat",
+      "createdAt": "2026-10-05T11:30:00Z",
+      "subject": "Evaluating you for 300 seats",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "We're a consulting firm comparing AI platforms for about 300 consultants. Could someone from sales walk us through the Enterprise plan and send your security documentation? We'd like to decide this quarter."
+        }
+      ],
+      "gold": {
+        "type": "other",
+        "area": "other",
+        "priority": "low",
+        "reach": "not_stated",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-59",
+      "tracker": "lobehub",
+      "createdAt": "2026-10-05T11:45:00Z",
+      "subject": "Boost your website's ranking",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Hello, we are an SEO agency and noticed your website could rank much higher. We offer high-quality backlinks starting at 99 USD a month. Reply to this email to get a free audit."
+        }
+      ],
+      "gold": {
+        "type": "other",
+        "area": "other",
+        "priority": "low",
+        "reach": "not_stated",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    },
+    {
+      "id": "support-60",
+      "tracker": "librechat",
+      "createdAt": "2026-10-05T12:00:00Z",
+      "subject": "Thanks for fixing our import so quickly",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Just wanted to say thank you to the person who helped us with our document import last week. Everything has been running smoothly since. No action needed."
+        }
+      ],
+      "gold": {
+        "type": "other",
+        "area": "other",
+        "priority": "low",
+        "reach": "not_stated",
+        "blocked": false,
+        "workaround": false,
+        "regression": false,
+        "dataExposure": false,
+        "dataLoss": false,
+        "nonGoal": null,
+        "injection": false,
+        "duplicateOf": null,
+        "attackTarget": null
+      }
+    }
+  ]
+}

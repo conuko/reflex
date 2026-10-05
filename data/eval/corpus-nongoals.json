@@ -1,0 +1,11 @@
+{
+  "note": "Non-goal gold labels for the issue corpus, kept apart so the frozen corpus files stay untouched. Every corpus issue not listed here asks for no non-goal.",
+  "nonGoals": {
+    "librechat#2110": "self_hosting",
+    "librechat#2126": "native_mobile_apps",
+    "librechat#2135": "media_generation",
+    "lobehub#4210": "self_hosting",
+    "lobehub#4218": "native_mobile_apps",
+    "lobehub#4233": "media_generation"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "note": "Corpus issues in the two trackers that describe the same or a very similar problem or request. Each pair stays in one split part, so tuning on one half can't leak into the other. Duplicate edges (duplicateOf) join groups automatically and are not listed here.",
+  "mirrors": [
+    ["librechat#2101", "lobehub#4203"],
+    ["librechat#2102", "lobehub#4237"],
+    ["librechat#2103", "lobehub#4234"],
+    ["librechat#2104", "lobehub#4202"],
+    ["librechat#2106", "lobehub#4227"],
+    ["librechat#2110", "lobehub#4210"],
+    ["librechat#2111", "lobehub#4212"],
+    ["librechat#2112", "lobehub#4206"],
+    ["librechat#2117", "lobehub#4238"],
+    ["librechat#2118", "lobehub#4221"],
+    ["librechat#2120", "lobehub#4222"],
+    ["librechat#2122", "lobehub#4201"],
+    ["librechat#2124", "lobehub#4239"],
+    ["librechat#2126", "lobehub#4218"],
+    ["librechat#2127", "lobehub#4229"],
+    ["librechat#2131", "lobehub#4224"],
+    ["librechat#2135", "lobehub#4233"],
+    ["librechat#2137", "lobehub#4223"],
+    ["librechat#2140", "lobehub#4236"]
+  ]
+}
