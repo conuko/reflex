@@ -23,8 +23,6 @@
     "db:reset": "tsx scripts/pending.ts 08",
     "worker": "tsx scripts/pending.ts 15",
     "worker:start": "tsx scripts/pending.ts 15",
-    "data:fetch": "tsx scripts/pending.ts 04",
-    "data:inventory": "tsx scripts/pending.ts 05",
     "eval:split": "tsx scripts/pending.ts 06",
     "eval:run": "tsx scripts/pending.ts 07",
     "eval:fts": "tsx scripts/pending.ts 08",

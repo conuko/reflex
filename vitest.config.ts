@@ -9,7 +9,6 @@ const testEnv = {
   JUDGMENT_PROVIDER: "fake",
   INTAKE_WEBHOOK_SECRET: "test-intake-webhook-secret-0123456789abcdef",
   TYPESAFE_API_KEY: "",
-  GITHUB_TOKEN: "",
   ANTHROPIC_API_KEY: "",
 };
 
