@@ -638,15 +638,21 @@ function costSection(run: Run): Report["cost"] {
 
 function evaluateGate(report: Omit<Report, "gate">): Report["gate"] {
   const t = GATE_THRESHOLDS;
-  const choice = (section: ChoiceSection, threshold: number) => ({
-    pass: above(section.jev.value, threshold) && (section.difference.ci?.low ?? 0) > 0,
-    value: `${format(section.jev)}; Jev − keyword ${signed(section.difference.value)} (${interval(section.difference.ci)})`,
+  const accuracy = (section: ChoiceSection, threshold: number) => ({
+    pass: above(section.jev.value, threshold),
+    value: format(section.jev),
+  });
+  const beatsKeywords = (section: ChoiceSection) => ({
+    pass: (section.difference.ci?.low ?? 0) > 0,
+    value: `Jev ${format(section.jev)}, keyword rules ${format(section.keyword)}; difference ${signed(section.difference.value)} (${interval(section.difference.ci)})`,
   });
   const { duplicates, injection } = report;
 
   return [
-    { id: "type_accuracy", ...choice(report.type, t.typeAccuracy) },
-    { id: "area_accuracy", ...choice(report.area, t.areaAccuracy) },
+    { id: "type_accuracy", ...accuracy(report.type, t.typeAccuracy) },
+    { id: "type_vs_keywords", ...beatsKeywords(report.type) },
+    { id: "area_accuracy", ...accuracy(report.area, t.areaAccuracy) },
+    { id: "area_vs_keywords", ...beatsKeywords(report.area) },
     {
       id: "duplicate_pick",
       pass: above(duplicates.pickAccuracy.value, t.duplicatePick),

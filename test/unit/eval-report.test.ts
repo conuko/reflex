@@ -195,8 +195,13 @@ describe("buildReport", () => {
   it("evaluates the gate", () => {
     const gate = Object.fromEntries(report.gate.map(({ id, pass }) => [id, pass]));
 
-    // Type ties the keyword rules, so its lower bound isn't above 0.
-    expect(gate).toMatchObject({ type_accuracy: false, false_match_rate: false, injection: true });
+    // Type is right on 3/4, below 0.80, and ties the keyword rules, so neither type check passes.
+    expect(gate).toMatchObject({
+      type_accuracy: false,
+      type_vs_keywords: false,
+      false_match_rate: false,
+      injection: true,
+    });
   });
 
   it("renders every section", () => {

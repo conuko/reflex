@@ -1,0 +1,27 @@
+{
+  "version": "v1",
+  "type": {
+    "bug": ["error", "fail", "failed", "failin", "broken", "broke", "crash", "crashe", "bug", "wrong", "missin", "empty", "disapp", "gone", "stuck", "timeou", "loop", "redire", "invali", "unavai", "502", "503", "500", "401", "429", "doesn", "didn", "isn", "stoppe", "anymor", "twice", "lost", "vanish", "blank", "overla", "blurry", "cut", "nothin", "raw"],
+    "feature_request": ["featur", "add", "love", "wish", "allow", "option", "able", "roadma", "build", "offer", "let", "nice", "idea", "editio", "would", "pagina", "domain", "bulk", "moderat", "histor"],
+    "question": ["possib", "way", "wonder", "unders", "explai", "curiou", "know", "confir", "doe", "limit", "guide", "recomm", "best", "advice", "find", "write", "decide", "really", "phishi", "pin"],
+    "account_billing": ["invoic", "charge", "charged", "billin", "bill", "refund", "paymen", "plan", "seat", "subscr", "cancel", "cancell", "card", "price", "pricin", "vat", "curren", "renewa", "contra", "transf", "bank", "overdu", "paid", "pay", "eur", "usd", "quote", "credit", "suspen", "spelle"],
+    "other": ["thank", "partne", "resell", "spam", "seo", "backli", "sponso", "typo", "inquir", "consul", "evalua", "compar", "sale", "test", "forwar", "agency"]
+  },
+  "area": {
+    "chat": ["chat", "conver", "sideba", "messag", "folder", "shared", "share", "window", "chart", "legend", "pin", "archiv", "dark", "link", "safari", "layout", "export"],
+    "agents": ["agent", "tool", "instru", "prompt", "jailbr", "topic", "persona", "settin"],
+    "workflows": ["workfl", "automa", "trigge", "schedu", "step", "cron", "publis", "approv", "builde", "run"],
+    "knowledge_library": ["librar", "collec", "docume", "upload", "index", "indexi", "pdf", "scan", "scanne", "citati", "cited", "cite", "retrie", "contra"],
+    "integrations": ["slack", "teams", "notion", "drive", "google", "jira", "zendes", "sharep", "integr", "connec", "webhoo", "salesf", "channe", "oauth"],
+    "models": ["model", "contex", "token", "picker", "image", "genera", "forget", "rememb", "json", "visual"],
+    "admin_sso": ["sso", "saml", "okta", "scim", "login", "admin", "audit", "role", "permis", "member", "entra", "deacti", "offboa", "passwo", "certif", "idp", "provis", "siem", "splunk", "sentin", "usage", "onelog", "rename"],
+    "api": ["api", "endpoi", "key", "sdk", "rate", "stream", "429", "401", "pagina", "curl"],
+    "other": ["outage", "down", "status", "region", "reside", "premis", "self", "hosted", "air", "gapped", "center", "train", "typo", "guide", "articl", "invoic", "charge", "charged", "refund", "paymen", "subscr", "cancel", "seat", "card", "vat", "bank", "partne", "sale", "seo", "thank", "phishi", "suspen", "test", "profil", "keyboa"]
+  },
+  "injection": ["triage", "classi", "priori", "urgent", "overri", "ignore", "system", "bot", "route", "mark", "metada", "decode", "skip", "review", "readin", "stay"],
+  "nonGoals": {
+    "self_hosting": ["premis", "prem", "self", "hosted", "air", "gapped", "offlin", "center", "kubern", "docker", "helm", "instal", "rack", "hardwa"],
+    "native_mobile_apps": ["iphone", "androi", "ios", "native", "store", "mobile", "play", "intune"],
+    "media_generation": ["image", "video", "voice", "audio", "banner", "visual", "narrat", "clone", "music", "genera", "picture", "png"]
+  }
+}

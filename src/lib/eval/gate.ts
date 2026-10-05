@@ -1,13 +1,17 @@
 // The go/no-go gate (plan M3), fixed before the test run and frozen with the
 // question set in one commit. Each check names what the app does instead if it
 // fails, so a failure changes behavior rather than inviting another round of
-// tuning on test.
+// tuning on test. Accuracy and "beats the keyword rules" are separate checks
+// with separate fallbacks: a baseline that is about as good is a finding for
+// the README, not a reason to send every ticket to review.
 
 export const GATE_VERSION = "v1";
 
 export type GateCheckId =
   | "type_accuracy"
+  | "type_vs_keywords"
   | "area_accuracy"
+  | "area_vs_keywords"
   | "duplicate_pick"
   | "false_match_rate"
   | "duplicate_vs_search"
@@ -25,14 +29,27 @@ export type GateCheck = {
 export const GATE_CHECKS: readonly GateCheck[] = [
   {
     id: "type_accuracy",
-    criterion: "type accuracy ≥ 0.80, and the 95% interval of Jev − keyword rules lies above 0",
+    criterion: "type accuracy ≥ 0.80",
     fallback: "Every triage needs review.",
     directional: false,
   },
   {
+    id: "type_vs_keywords",
+    criterion: "the 95% interval of Jev − keyword rules for type lies above 0",
+    fallback:
+      "The README says plain keyword rules find the type about as well; the app is unchanged.",
+    directional: false,
+  },
+  {
     id: "area_accuracy",
-    criterion: "area accuracy ≥ 0.60, and the 95% interval of Jev − keyword rules lies above 0",
+    criterion: "area accuracy ≥ 0.60",
     fallback: "Every triage needs review.",
+    directional: false,
+  },
+  {
+    id: "area_vs_keywords",
+    criterion: "the 95% interval of Jev − keyword rules for area lies above 0",
+    fallback: "The README says plain keyword rules route about as well; the app is unchanged.",
     directional: false,
   },
   {

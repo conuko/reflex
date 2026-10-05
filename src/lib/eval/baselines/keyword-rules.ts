@@ -19,11 +19,13 @@ import { AREAS, TICKET_TYPES } from "@/lib/triage/questions";
 // pinned by a hash; a revision (at most 3, on dev only) is a new file and a
 // new version.
 
-export const KEYWORD_RULES_VERSION = "v0";
+export const KEYWORD_RULES_VERSION = "v1";
 
 /** sha256 of each frozen rules file; a test fails if a frozen file changes. */
 export const KEYWORD_RULE_HASHES: Record<string, string> = {
   v0: "fa034dd6a22fca1e7b31ab757847e62fbf9c697fcb0ce92ae6d3dc775ec91311",
+  // v1: the one dev-only revision, hand-written from v0's misses on dev (plan M3).
+  v1: "7ec593c1a46d9b1a3f056e5f4d337cdbd3f3c465cdacc1b5a03c8c22855cefd1",
 };
 
 /** Matching keywords needed before the rules answer yes for injection or a non-goal. */
