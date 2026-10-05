@@ -1,5 +1,5 @@
 import { spawnSync } from "node:child_process";
-import { copyFileSync, mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import { copyFileSync, existsSync, mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
@@ -59,6 +59,10 @@ beforeAll(() => {
     mkdirSync(join(dir, dirname(file)), { recursive: true });
     writeFileSync(join(dir, file), `import * as probe from "${specifier}";\n\nexport { probe };\n`);
   }
+  writeFileSync(
+    join(dir, unassignedServerOnly),
+    'import "server-only";\n\nexport const db = {};\n',
+  );
 
   const result = spawnSync(join(repoRoot, "node_modules/.bin/oxlint"), ["--format=json"], {
     cwd: dir,
@@ -95,6 +99,7 @@ describe("framework-free boundary for src/lib and src/worker", () => {
 
 describe("server-only", () => {
   it("can be imported for its side effect without a warning", () => {
+    expect(existsSync(join(dir, unassignedServerOnly))).toBe(true);
     expect(diagnostics.filter((d) => d.filename === unassignedServerOnly)).toEqual([]);
   });
 });

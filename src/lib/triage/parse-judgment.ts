@@ -4,7 +4,7 @@ import type { NonGoal } from "@/lib/config/non-goals";
 
 import type { Area, CandidateMap, Reach, TicketType } from "./questions";
 
-import { AREAS, NO_DUPLICATE, NONGOAL_PREFIX, REACHES, TICKET_TYPES } from "./questions";
+import { AREAS, NO_DUPLICATE, nonGoalQuestionId, REACHES, TICKET_TYPES } from "./questions";
 
 // Validates a System One response against the question set it answered, and
 // reshapes it into the answers a policy reads. A choice keeps the probability
@@ -37,11 +37,9 @@ export type Answers = {
   injection: number;
 };
 
-export type ParsedJudgment = {
-  model: string;
-  answers: Answers;
-  usage: { inputTokens: number; outputTokens: number };
-};
+export type Usage = { inputTokens: number; outputTokens: number };
+
+export type ParsedJudgment = { model: string; answers: Answers; usage: Usage };
 
 const probability = z.number().min(0).max(1);
 
@@ -101,8 +99,8 @@ export function parseJudgment(
 ): ParsedJudgment {
   const { model, answers, usage } = envelope.parse(response);
   const fixed = fixedAnswers.parse(answers);
-  const asked = z
-    .object(Object.fromEntries(nonGoals.map(({ id }) => [`${NONGOAL_PREFIX}${id}`, noulAnswer])))
+  const nonGoalAnswers = z
+    .object(Object.fromEntries(nonGoals.map(({ id }) => [nonGoalQuestionId(id), noulAnswer])))
     .parse(answers);
 
   return {
@@ -118,7 +116,9 @@ export function parseJudgment(
       regression: fixed.regression,
       frustration: fixed.frustration,
       duplicate: parseDuplicate(answers, candidateMap),
-      nonGoals: Object.fromEntries(nonGoals.map(({ id }) => [id, asked[`${NONGOAL_PREFIX}${id}`]])),
+      nonGoals: Object.fromEntries(
+        nonGoals.map(({ id }) => [id, nonGoalAnswers[nonGoalQuestionId(id)]]),
+      ),
       injection: fixed.injection,
     },
     usage: { inputTokens: usage.input_tokens, outputTokens: usage.output_tokens },

@@ -1,10 +1,19 @@
-import type { Answers } from "@/lib/triage/parse-judgment";
+import type { Questions } from "@typesafe-ai/sdk";
+
+import type { Answers, Usage } from "@/lib/triage/parse-judgment";
 import type { Candidate, CandidateMap } from "@/lib/triage/questions";
 import type { TicketInput, TicketState } from "@/lib/triage/state";
+
+import { NON_GOALS } from "@/lib/config/non-goals";
+import { parseJudgment } from "@/lib/triage/parse-judgment";
+import { buildQuestions, QUESTION_SET_VERSION } from "@/lib/triage/questions";
+import { buildState } from "@/lib/triage/state";
 
 // A judgment provider answers the question set for one ticket in one request.
 // It sees only the ticket's subject and messages, plus the duplicate
 // candidates as options; everything else stays in code (ADR-0001).
+
+export type JudgmentProviderId = "jev" | "fake";
 
 export type JudgmentInput = {
   ticket: TicketInput;
@@ -13,8 +22,7 @@ export type JudgmentInput = {
 };
 
 export type Judgment = {
-  /** The judgment provider's id, e.g. `jev`. */
-  provider: string;
+  provider: JudgmentProviderId;
   /** The model that answered, as it reported itself, e.g. `jev-1.13.0`. */
   model: string;
   requestId: string | null;
@@ -25,10 +33,43 @@ export type Judgment = {
   state: TicketState;
   candidateMap: CandidateMap;
   answers: Answers;
-  usage: { inputTokens: number; outputTokens: number };
+  usage: Usage;
 };
 
 export interface JudgmentProvider {
-  readonly id: string;
+  readonly id: JudgmentProviderId;
   judge(input: JudgmentInput, options?: { signal?: AbortSignal }): Promise<Judgment>;
+}
+
+/** The state and questions of one System One request, exactly as built. */
+export type SystemOneRequest = { state: TicketState; questions: Questions };
+
+/** Sends one request; returns the response body and its request id. */
+export type SendRequest = (
+  request: SystemOneRequest,
+) => Promise<{ body: unknown; requestId: string | null }>;
+
+// Every provider judges through here, so they all send the same state and
+// question text and read the answers the same way; only `send` differs.
+export async function judgeTicket(
+  provider: JudgmentProviderId,
+  { ticket, candidates }: JudgmentInput,
+  send: SendRequest,
+): Promise<Judgment> {
+  const state = buildState(ticket);
+  const { questions, candidateMap } = buildQuestions({ candidates, nonGoals: NON_GOALS });
+  const { body, requestId } = await send({ state, questions });
+  const { model, answers, usage } = parseJudgment(body, { candidateMap, nonGoals: NON_GOALS });
+
+  return {
+    provider,
+    model,
+    requestId,
+    questionSetVersion: QUESTION_SET_VERSION,
+    messageCount: ticket.messages.length,
+    state,
+    candidateMap,
+    answers,
+    usage,
+  };
 }

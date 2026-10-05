@@ -35,7 +35,6 @@ const workerSchema = z.discriminatedUnion(
 
 export type WebEnv = z.infer<typeof webSchema>;
 export type WorkerEnv = z.infer<typeof workerSchema>;
-export type JudgmentProviderId = WorkerEnv["JUDGMENT_PROVIDER"];
 
 export function parseWebEnv(source: EnvSource): WebEnv {
   return parse(webSchema, withoutBlanks(source));

@@ -2,12 +2,9 @@ import type { Question, Questions } from "@typesafe-ai/sdk";
 
 import { createHash } from "node:crypto";
 
-import { NON_GOALS } from "@/lib/config/non-goals";
-import { parseJudgment } from "@/lib/triage/parse-judgment";
-import { buildQuestions, QUESTION_SET_VERSION } from "@/lib/triage/questions";
-import { buildState } from "@/lib/triage/state";
-
 import type { JudgmentProvider } from "./provider";
+
+import { judgeTicket } from "./provider";
 
 // The judgment provider for tests: no network, no key, no cost. It builds the
 // same state and questions as Jev, makes up a System One response from a hash
@@ -24,27 +21,15 @@ export function createFakeProvider(): FakeProvider {
     get calls() {
       return calls;
     },
-    async judge({ ticket, candidates }) {
+    judge(input) {
       calls++;
-      const state = buildState(ticket);
-      const { questions, candidateMap } = buildQuestions({ candidates, nonGoals: NON_GOALS });
-      const digest = createHash("sha256").update(JSON.stringify({ state, candidateMap })).digest();
-      const { model, answers, usage } = parseJudgment(fakeResponse(questions, digest), {
-        candidateMap,
-        nonGoals: NON_GOALS,
+      return judgeTicket("fake", input, async (request) => {
+        const digest = createHash("sha256").update(JSON.stringify(request)).digest();
+        return {
+          body: fakeResponse(request.questions, digest),
+          requestId: `fake-${digest.toString("hex", 0, 8)}`,
+        };
       });
-
-      return {
-        provider: "fake",
-        model,
-        requestId: `fake-${digest.toString("hex", 0, 8)}`,
-        questionSetVersion: QUESTION_SET_VERSION,
-        messageCount: ticket.messages.length,
-        state,
-        candidateMap,
-        answers,
-        usage,
-      };
     },
   };
 }

@@ -1,5 +1,3 @@
-import { readdirSync, readFileSync } from "node:fs";
-import { join, resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import { z } from "zod";
 
@@ -9,18 +7,14 @@ import { NON_GOALS } from "@/lib/config/non-goals";
 import { buildQuestions } from "@/lib/triage/questions";
 import { buildState } from "@/lib/triage/state";
 
+import { loadJevFixtures } from "../support/jev-fixtures";
+
 // Jev has no published tokenizer, so these tests estimate one token per 3
 // UTF-8 bytes. Measured with jev-1.13.0 on 2026-10-05, a ticket at every cap
 // ran at ~4.5 bytes per token (state plus options 3,994 tokens), so the
 // estimate errs high. The first test checks it against every recorded request.
 
 const estimateTokens = (value: unknown) => Math.ceil(Buffer.byteLength(JSON.stringify(value)) / 3);
-
-const fixturesDir = resolve(import.meta.dirname, "../fixtures/jev");
-const recorded = z.object({
-  request: z.object({ body: z.unknown() }),
-  response: z.object({ body: z.object({ usage: z.object({ input_tokens: z.number() }) }) }),
-});
 
 const text =
   "Our agent run failed again with error 502 after the workflow called the CRM tool, and the logs show retries timing out. ";
@@ -45,14 +39,14 @@ function largestTicket() {
 }
 
 describe("Jev request size", () => {
-  it.each(readdirSync(fixturesDir).filter((file) => file.endsWith(".json")))(
-    "never estimates fewer tokens than Jev counted for %s",
-    (file) => {
-      const { request, response } = recorded.parse(
-        JSON.parse(readFileSync(join(fixturesDir, file), "utf8")),
-      );
+  it.each(loadJevFixtures())(
+    "never estimates fewer tokens than Jev counted for $name",
+    ({ request, response }) => {
+      const { usage } = z
+        .object({ usage: z.object({ input_tokens: z.number() }) })
+        .parse(response.body);
 
-      expect(estimateTokens(request.body)).toBeGreaterThanOrEqual(response.body.usage.input_tokens);
+      expect(estimateTokens(request.body)).toBeGreaterThanOrEqual(usage.input_tokens);
     },
   );
 

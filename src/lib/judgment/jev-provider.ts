@@ -7,12 +7,9 @@ import {
   TypeSafeClient,
 } from "@typesafe-ai/sdk";
 
-import { NON_GOALS } from "@/lib/config/non-goals";
-import { parseJudgment } from "@/lib/triage/parse-judgment";
-import { buildQuestions, QUESTION_SET_VERSION } from "@/lib/triage/questions";
-import { buildState } from "@/lib/triage/state";
-
 import type { JudgmentProvider } from "./provider";
+
+import { judgeTicket } from "./provider";
 
 /** Pinned: changing it takes a reviewed commit and an eval rerun. */
 export const JEV_MODEL = "jev-1.13.0";
@@ -28,29 +25,13 @@ export function createJevClient({ apiKey, fetch }: { apiKey: string; fetch?: Fet
 export function createJevProvider({ client }: { client: TypeSafeClient }): JudgmentProvider {
   return {
     id: "jev",
-    async judge({ ticket, candidates }, options) {
-      const state = buildState(ticket);
-      const { questions, candidateMap } = buildQuestions({ candidates, nonGoals: NON_GOALS });
-      const { data, requestId } = await client
-        .systemOne({ state, questions, model: JEV_MODEL }, { signal: options?.signal })
-        .withResponse();
-      const { model, answers, usage } = parseJudgment(data, {
-        candidateMap,
-        nonGoals: NON_GOALS,
-      });
-
-      return {
-        provider: "jev",
-        model,
-        requestId: requestId ?? null,
-        questionSetVersion: QUESTION_SET_VERSION,
-        messageCount: ticket.messages.length,
-        state,
-        candidateMap,
-        answers,
-        usage,
-      };
-    },
+    judge: (input, options) =>
+      judgeTicket("jev", input, async ({ state, questions }) => {
+        const { data, requestId } = await client
+          .systemOne({ state, questions, model: JEV_MODEL }, { signal: options?.signal })
+          .withResponse();
+        return { body: data, requestId: requestId ?? null };
+      }),
   };
 }
 

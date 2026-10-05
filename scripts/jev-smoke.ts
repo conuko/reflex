@@ -12,6 +12,7 @@ import type { Judgment } from "@/lib/judgment/provider";
 
 import { scriptEnv } from "@/lib/env";
 import { createJevClient, createJevProvider } from "@/lib/judgment/jev-provider";
+import { nonGoalQuestionId } from "@/lib/triage/questions";
 
 import { SMOKE_TICKETS } from "./jev-smoke-tickets";
 
@@ -59,11 +60,11 @@ function formatAnswers({ answers }: Judgment): [string, string][] {
     ["type", choice(answers.type)],
     ["area", choice(answers.area)],
     ["reach", choice(answers.reach)],
-    ["blocked", yes(answers.blocked)],
-    ["workaround", yes(answers.workaround)],
-    ["data_exposure", yes(answers.dataExposure)],
-    ["data_loss", yes(answers.dataLoss)],
-    ["regression", yes(answers.regression)],
+    ["blocked", yesNo(answers.blocked)],
+    ["workaround", yesNo(answers.workaround)],
+    ["data_exposure", yesNo(answers.dataExposure)],
+    ["data_loss", yesNo(answers.dataLoss)],
+    ["regression", yesNo(answers.regression)],
     ["frustration", `${answers.frustration.score.toFixed(2)} of 4`],
     [
       "duplicate_of",
@@ -72,10 +73,10 @@ function formatAnswers({ answers }: Judgment): [string, string][] {
         : "(no candidates)",
     ],
     ...Object.entries(answers.nonGoals).map(([id, p]): [string, string] => [
-      `nongoal_${id}`,
-      yes(p),
+      nonGoalQuestionId(id),
+      yesNo(p),
     ]),
-    ["injection", yes(answers.injection)],
+    ["injection", yesNo(answers.injection)],
   ];
 }
 
@@ -83,7 +84,7 @@ function choice(answer: { choice: string; probability: number }): string {
   return `${answer.choice} (${answer.probability.toFixed(2)})`;
 }
 
-function yes(probability: number): string {
+function yesNo(probability: number): string {
   return `${probability >= 0.5 ? "yes" : "no"} (p=${probability.toFixed(2)})`;
 }
 

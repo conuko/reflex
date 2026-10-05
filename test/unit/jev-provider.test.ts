@@ -1,7 +1,5 @@
 import type { Fetch } from "@typesafe-ai/sdk";
 
-import { readdirSync, readFileSync } from "node:fs";
-import { join, resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import { z } from "zod";
 
@@ -13,47 +11,18 @@ import {
 } from "@/lib/judgment/jev-provider";
 import { QUESTION_SET_VERSION } from "@/lib/triage/questions";
 
+import type { JevFixture } from "../support/jev-fixtures";
+
+import { loadJevFixtures } from "../support/jev-fixtures";
+
 // Contract test: the real SDK client, with a fetch that replays responses
 // recorded from the Jev API by `pnpm jev:smoke --record`. A replay only
 // answers the exact request it was recorded for, so a fixture that no longer
 // matches the question set fails here until it's re-recorded.
 
-const fixturesDir = resolve(import.meta.dirname, "../fixtures/jev");
+const fixtures = loadJevFixtures();
 
-const fixtureSchema = z.object({
-  input: z.object({
-    ticket: z.object({
-      subject: z.string(),
-      messages: z.array(z.object({ from: z.enum(["customer", "support"]), text: z.string() })),
-    }),
-    candidates: z.array(
-      z.object({
-        issueId: z.string(),
-        title: z.string(),
-        excerpt: z.string(),
-        state: z.enum(["open", "closed"]),
-      }),
-    ),
-  }),
-  request: z.object({ path: z.string(), body: z.record(z.string(), z.unknown()) }),
-  response: z.object({
-    status: z.number(),
-    headers: z.record(z.string(), z.string()),
-    body: z.unknown(),
-  }),
-});
-
-type Fixture = z.infer<typeof fixtureSchema>;
-
-const fixtures = readdirSync(fixturesDir)
-  .filter((file) => file.endsWith(".json"))
-  .map((file) =>
-    Object.assign(fixtureSchema.parse(JSON.parse(readFileSync(join(fixturesDir, file), "utf8"))), {
-      name: file.replace(/\.json$/, ""),
-    }),
-  );
-
-const fixture = (name: string): Fixture => {
+const fixture = (name: string): JevFixture => {
   const found = fixtures.find((f) => f.name === name);
   if (!found) throw new Error(`No Jev fixture named ${name}`);
   return found;
@@ -88,8 +57,8 @@ describe("Jev judgment provider (recorded responses)", () => {
     const judgment = await createJevProvider({ client: client(replay(f)) }).judge(f.input);
 
     expect(judgment).toMatchObject({
-      requestId: "req_01a10b3e1ed075319908b048eb24dddf",
-      usage: { inputTokens: 4114 },
+      requestId: "req_01a10b4a97e07876af76a4b7824b7489",
+      usage: { inputTokens: 4539 },
       answers: {
         type: { choice: "bug" },
         area: { choice: "admin_sso" },
@@ -222,7 +191,7 @@ function client(fetch: Fetch) {
 }
 
 // Answers only the exact request the fixture was recorded for.
-function replay(f: Fixture): Fetch {
+function replay(f: JevFixture): Fetch {
   return async (url, init) => {
     expect(new URL(url).pathname).toBe(f.request.path);
     expect(parseBody(init), "fixture is stale: run `pnpm jev:smoke --record`").toEqual(
@@ -233,14 +202,14 @@ function replay(f: Fixture): Fetch {
 }
 
 // Answers any request with the fixture's response, keeping what was sent.
-function capture(f: Fixture, sent: unknown[]): Fetch {
+function capture(f: JevFixture, sent: unknown[]): Fetch {
   return async (_url, init) => {
     sent.push(parseBody(init));
     return respond(f);
   };
 }
 
-function respond(f: Fixture): Response {
+function respond(f: JevFixture): Response {
   return new Response(JSON.stringify(f.response.body), {
     status: f.response.status,
     headers: f.response.headers,
