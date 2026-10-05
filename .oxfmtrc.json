@@ -25,6 +25,7 @@
     "src/generated/**",
     "data/**",
     "eval/results/**",
+    "eval/splits/**",
     "eval/fixtures/**",
     "test/fixtures/**"
   ]

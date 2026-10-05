@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import type { Candidate } from "@/lib/triage/questions";
 
 import { NON_GOALS } from "@/lib/config/non-goals";
-import { buildQuestions, QUESTION_SET_VERSION } from "@/lib/triage/questions";
+import { buildQuestions, QUESTION_SET_VERSION, questionSetHash } from "@/lib/triage/questions";
 
 const candidates: Candidate[] = [
   {
@@ -112,5 +112,18 @@ describe("buildQuestions", () => {
     await expect(JSON.stringify(set, null, 2)).toMatchFileSnapshot(
       `../fixtures/question-sets/${QUESTION_SET_VERSION}.json`,
     );
+  });
+});
+
+describe("questionSetHash", () => {
+  it("is the same for the same question text", () => {
+    expect(questionSetHash(NON_GOALS)).toBe(questionSetHash([...NON_GOALS]));
+  });
+
+  it("changes when any question text changes", () => {
+    const [first, ...rest] = NON_GOALS;
+    const edited = first ? [{ ...first, what: `${first.what} Edited.` }, ...rest] : [];
+
+    expect(questionSetHash(edited)).not.toBe(questionSetHash(NON_GOALS));
   });
 });

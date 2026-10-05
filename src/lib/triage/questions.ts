@@ -1,6 +1,7 @@
 import type { ChoiceQuestion, NoulQuestion, Questions, ScoreQuestion } from "@typesafe-ai/sdk";
 
 import { choice, noul, score } from "@typesafe-ai/sdk";
+import { createHash } from "node:crypto";
 
 import type { NonGoal } from "@/lib/config/non-goals";
 
@@ -373,6 +374,21 @@ function nonGoalQuestion({ what, not_for, examples }: NonGoal): NoulQuestion {
       },
     },
   );
+}
+
+// A placeholder candidate, so the hash covers the duplicate question's text too.
+const HASH_CANDIDATE: Candidate = {
+  issueId: "hash",
+  title: "Example issue",
+  excerpt: "Example excerpt.",
+  state: "open",
+};
+
+/** A short hash of the question text, recorded on every eval run so results
+ * of different text never end up in one file, even under the same version. */
+export function questionSetHash(nonGoals: readonly NonGoal[]): string {
+  const { questions } = buildQuestions({ candidates: [HASH_CANDIDATE], nonGoals });
+  return createHash("sha256").update(JSON.stringify(questions)).digest("hex").slice(0, 16);
 }
 
 /** The duplicate question's option key for the candidate at `index`. */
