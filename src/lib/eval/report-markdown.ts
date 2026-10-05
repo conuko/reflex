@@ -19,8 +19,9 @@ export function renderReport(report: Report): string {
   add("## Runs", "");
   add(
     table(
-      ["condition", "model", "question set", "items"],
+      ["run", "condition", "model", "question set", "items"],
       report.runs.map((run) => [
+        run.role,
         run.condition,
         run.model,
         `${run.questionSetVersion} (${run.questionSetHash})`,

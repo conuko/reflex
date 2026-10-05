@@ -92,6 +92,8 @@ export type ChoiceSection = {
 export type Report = {
   part: string;
   runs: {
+    /** "first", "shuffled" or "second" (the sequential repeat). */
+    role: string;
     condition: string;
     model: string;
     questionSetVersion: string;
@@ -191,10 +193,17 @@ export function buildReport(input: ReportInput): Report {
 
   const body: Omit<Report, "gate"> = {
     part: runs.candidates.header.part,
-    runs: [runs.candidates, runs.shuffled, runs.second].flatMap((run) =>
+    runs: (
+      [
+        ["first", runs.candidates],
+        ["shuffled", runs.shuffled],
+        ["second", runs.second],
+      ] as const
+    ).flatMap(([role, run]) =>
       run
         ? [
             {
+              role,
               condition: run.header.condition,
               model: [...new Set(run.records.map(({ judgment }) => judgment.model))].join(", "),
               questionSetVersion: run.header.questionSetVersion,

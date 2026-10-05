@@ -2,6 +2,7 @@
   "part": "dev",
   "runs": [
     {
+      "role": "first",
       "condition": "candidates",
       "model": "jev-1.13.0",
       "questionSetVersion": "v1",
@@ -9,6 +10,7 @@
       "items": 60
     },
     {
+      "role": "shuffled",
       "condition": "shuffled",
       "model": "jev-1.13.0",
       "questionSetVersion": "v1",
@@ -19,7 +21,7 @@
   "splitVersion": "v1",
   "candidatesVersion": "v1",
   "keywordRulesVersion": "v1",
-  "testRuns": 0,
+  "testRuns": 3,
   "counts": {
     "corpus": 26,
     "support": 20,
