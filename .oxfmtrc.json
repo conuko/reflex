@@ -26,6 +26,7 @@
     "data/**",
     "eval/results/**",
     "eval/splits/**",
+    "eval/candidates/**",
     "eval/fixtures/**",
     "test/fixtures/**"
   ]

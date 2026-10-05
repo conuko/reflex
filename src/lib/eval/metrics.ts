@@ -28,3 +28,12 @@ export function confusionMatrix<L extends string>(
   }
   return matrix;
 }
+
+/** The share of cases whose target is among the first `k` ranked ids. */
+export function recallAtK(
+  cases: readonly { target: string; ranked: readonly string[] }[],
+  k: number,
+): Accuracy {
+  const hits = cases.filter(({ target, ranked }) => ranked.slice(0, k).includes(target)).length;
+  return { correct: hits, n: cases.length, value: cases.length === 0 ? null : hits / cases.length };
+}

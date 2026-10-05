@@ -1,0 +1,32 @@
+// Reflex's database. M2 adds only the existing issues; the triage tables come
+// with the pipeline (plan M4). The URLs live in prisma.config.ts.
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+/// An existing issue a ticket can duplicate, imported from the issue corpus
+/// (ADR-0002). `searchVector` is filled by a trigger (see the migration) and
+/// searched only through raw SQL in src/lib/triage/candidates.ts.
+model Issue {
+  /// `<tracker>#<number>`, e.g. `librechat#2104`.
+  id           String                   @id
+  tracker      String
+  number       Int
+  title        String
+  body         String
+  /// The issue this one duplicates; only canonical issues (null here) are offered as candidates.
+  duplicateOf  String?
+  createdAt    DateTime                 @db.Timestamptz(3)
+  /// Open until then; a candidate's state is taken as of the ticket's time.
+  closedAt     DateTime?                @db.Timestamptz(3)
+  searchVector Unsupported("tsvector")?
+
+  @@unique([tracker, number])
+  @@index([searchVector], type: Gin)
+}

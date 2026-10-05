@@ -22,7 +22,13 @@ export default defineConfig({
       },
       {
         extends: true,
-        test: { name: "integration", include: ["test/integration/**/*.test.ts"] },
+        test: {
+          name: "integration",
+          include: ["test/integration/**/*.test.ts"],
+          // Migrates the test database first; files share it, so they run one at a time.
+          globalSetup: ["test/integration/global-setup.ts"],
+          fileParallelism: false,
+        },
       },
     ],
   },

@@ -1,0 +1,7004 @@
+{
+  "version": "v1",
+  "searchTerms": 20,
+  "items": {
+    "adversarial-01": [
+      {
+        "issueId": "librechat#2137",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2120",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2130",
+        "rank": 0.5
+      },
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2122",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.444444
+      }
+    ],
+    "adversarial-02": [
+      {
+        "issueId": "lobehub#4239",
+        "rank": 0.833333
+      },
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.821429
+      },
+      {
+        "issueId": "lobehub#4240",
+        "rank": 0.8
+      },
+      {
+        "issueId": "lobehub#4232",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4228",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4236",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4235",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4230",
+        "rank": 0.615385
+      }
+    ],
+    "adversarial-03": [
+      {
+        "issueId": "librechat#2132",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2139",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2110",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2140",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2125",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2126",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2120",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2116",
+        "rank": 0.666667
+      }
+    ],
+    "adversarial-04": [
+      {
+        "issueId": "lobehub#4210",
+        "rank": 0.861111
+      },
+      {
+        "issueId": "lobehub#4228",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "lobehub#4240",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "lobehub#4237",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.642857
+      }
+    ],
+    "adversarial-05": [
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.827586
+      },
+      {
+        "issueId": "librechat#2128",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "librechat#2132",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2140",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "librechat#2116",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2127",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2120",
+        "rank": 0.615385
+      }
+    ],
+    "adversarial-06": [
+      {
+        "issueId": "lobehub#4228",
+        "rank": 0.83871
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "lobehub#4240",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4224",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.666667
+      }
+    ],
+    "adversarial-07": [
+      {
+        "issueId": "librechat#2125",
+        "rank": 0.8
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2133",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "librechat#2127",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2139",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2140",
+        "rank": 0.642857
+      }
+    ],
+    "adversarial-08": [
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "lobehub#4235",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "lobehub#4230",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4232",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4217",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4231",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4240",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.666667
+      }
+    ],
+    "adversarial-09": [
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.871795
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2132",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2135",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2140",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2139",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.642857
+      }
+    ],
+    "adversarial-10": [
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.891304
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.827586
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.821429
+      },
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.8
+      },
+      {
+        "issueId": "lobehub#4234",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4231",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4232",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.75
+      }
+    ],
+    "adversarial-11": [
+      {
+        "issueId": "librechat#2139",
+        "rank": 0.852941
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.84375
+      },
+      {
+        "issueId": "librechat#2125",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2135",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2110",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2132",
+        "rank": 0.545455
+      }
+    ],
+    "adversarial-12": [
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4238",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4233",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "lobehub#4230",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4231",
+        "rank": 0.444444
+      }
+    ],
+    "adversarial-13": [
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "librechat#2116",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "librechat#2139",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2138",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.642857
+      }
+    ],
+    "adversarial-14": [
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.814815
+      },
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "lobehub#4228",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4238",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4233",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4240",
+        "rank": 0.545455
+      }
+    ],
+    "adversarial-15": [
+      {
+        "issueId": "librechat#2125",
+        "rank": 0.814815
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2135",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2132",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2130",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.545455
+      }
+    ],
+    "adversarial-16": [
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4230",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4222",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4210",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4240",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "lobehub#4236",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "lobehub#4235",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "lobehub#4232",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "lobehub#4231",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.285714
+      }
+    ],
+    "adversarial-17": [
+      {
+        "issueId": "librechat#2139",
+        "rank": 0.8
+      },
+      {
+        "issueId": "librechat#2136",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2135",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2130",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.615385
+      }
+    ],
+    "adversarial-18": [
+      {
+        "issueId": "lobehub#4232",
+        "rank": 0.814815
+      },
+      {
+        "issueId": "lobehub#4240",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4235",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4210",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4237",
+        "rank": 0.444444
+      }
+    ],
+    "adversarial-19": [
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.8
+      },
+      {
+        "issueId": "librechat#2137",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "librechat#2133",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2136",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "librechat#2130",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2125",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2120",
+        "rank": 0.615385
+      }
+    ],
+    "adversarial-20": [
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "lobehub#4240",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4224",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4235",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.615385
+      }
+    ],
+    "adversarial-21": [
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.83871
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.833333
+      },
+      {
+        "issueId": "librechat#2137",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2120",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2130",
+        "rank": 0.5
+      }
+    ],
+    "adversarial-22": [
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.864865
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.848485
+      },
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4231",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4233",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4234",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4210",
+        "rank": 0.615385
+      }
+    ],
+    "adversarial-23": [
+      {
+        "issueId": "librechat#2133",
+        "rank": 0.871795
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.857143
+      },
+      {
+        "issueId": "librechat#2137",
+        "rank": 0.833333
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "librechat#2130",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2116",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2139",
+        "rank": 0.642857
+      }
+    ],
+    "adversarial-24": [
+      {
+        "issueId": "lobehub#4219",
+        "rank": 0.83871
+      },
+      {
+        "issueId": "lobehub#4240",
+        "rank": 0.821429
+      },
+      {
+        "issueId": "lobehub#4237",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "lobehub#4224",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4233",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4228",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.705882
+      }
+    ],
+    "adversarial-25": [
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.883721
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.848485
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "librechat#2127",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2136",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.6875
+      }
+    ],
+    "adversarial-26": [
+      {
+        "issueId": "lobehub#4234",
+        "rank": 0.895833
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.886364
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.878049
+      },
+      {
+        "issueId": "lobehub#4217",
+        "rank": 0.848485
+      },
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.821429
+      },
+      {
+        "issueId": "lobehub#4219",
+        "rank": 0.8
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.8
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.722222
+      }
+    ],
+    "adversarial-27": [
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "librechat#2139",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2136",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2130",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2132",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2122",
+        "rank": 0.444444
+      }
+    ],
+    "adversarial-28": [
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.833333
+      },
+      {
+        "issueId": "lobehub#4232",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "lobehub#4239",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4224",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4219",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4217",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.615385
+      }
+    ],
+    "adversarial-29": [
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.888889
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.83871
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.8
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "librechat#2137",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2135",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2132",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2126",
+        "rank": 0.705882
+      }
+    ],
+    "adversarial-30": [
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.871795
+      },
+      {
+        "issueId": "lobehub#4228",
+        "rank": 0.827586
+      },
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4234",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4233",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4218",
+        "rank": 0.722222
+      }
+    ],
+    "adversarial-31": [
+      {
+        "issueId": "librechat#2137",
+        "rank": 0.895833
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.883721
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.833333
+      },
+      {
+        "issueId": "librechat#2136",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "librechat#2135",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2110",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2139",
+        "rank": 0.666667
+      }
+    ],
+    "adversarial-32": [
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.901961
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.883721
+      },
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.857143
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "lobehub#4234",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4231",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.722222
+      }
+    ],
+    "adversarial-33": [
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.919355
+      },
+      {
+        "issueId": "librechat#2122",
+        "rank": 0.83871
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "librechat#2132",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2120",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2131",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2140",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.583333
+      }
+    ],
+    "adversarial-34": [
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.833333
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.821429
+      },
+      {
+        "issueId": "lobehub#4219",
+        "rank": 0.814815
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.8
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.8
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4238",
+        "rank": 0.722222
+      }
+    ],
+    "adversarial-35": [
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.814815
+      },
+      {
+        "issueId": "librechat#2137",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "librechat#2130",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2116",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2135",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "librechat#2133",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2128",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2110",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.615385
+      }
+    ],
+    "adversarial-36": [
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.871795
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.871795
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.864865
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.84375
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "lobehub#4219",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4240",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4236",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.722222
+      }
+    ],
+    "adversarial-37": [
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.833333
+      },
+      {
+        "issueId": "librechat#2130",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2137",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2136",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2131",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2116",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.444444
+      }
+    ],
+    "adversarial-38": [
+      {
+        "issueId": "lobehub#4228",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "lobehub#4235",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4240",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4236",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "lobehub#4234",
+        "rank": 0.545455
+      }
+    ],
+    "adversarial-39": [
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2133",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2127",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2140",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2116",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.545455
+      }
+    ],
+    "adversarial-40": [
+      {
+        "issueId": "lobehub#4235",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "lobehub#4238",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4219",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4237",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4232",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.444444
+      }
+    ],
+    "librechat#2101": [],
+    "librechat#2102": [
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.8
+      }
+    ],
+    "librechat#2103": [
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.814815
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.772727
+      }
+    ],
+    "librechat#2104": [
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.83871
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.615385
+      }
+    ],
+    "librechat#2105": [
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.8
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.285714
+      }
+    ],
+    "librechat#2106": [
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.83871
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.444444
+      }
+    ],
+    "librechat#2107": [
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.878049
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.444444
+      }
+    ],
+    "librechat#2108": [
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.444444
+      }
+    ],
+    "librechat#2109": [
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.864865
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.285714
+      }
+    ],
+    "librechat#2110": [
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.893617
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.83871
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.545455
+      }
+    ],
+    "librechat#2111": [
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.8
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2110",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.444444
+      }
+    ],
+    "librechat#2112": [
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.285714
+      }
+    ],
+    "librechat#2113": [
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.857143
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2110",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.285714
+      }
+    ],
+    "librechat#2114": [
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.903846
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.5
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.285714
+      }
+    ],
+    "librechat#2115": [
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2110",
+        "rank": 0.285714
+      }
+    ],
+    "librechat#2116": [
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2110",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.444444
+      }
+    ],
+    "librechat#2117": [
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2116",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "librechat#2110",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.285714
+      }
+    ],
+    "librechat#2118": [
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2110",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2116",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.285714
+      }
+    ],
+    "librechat#2119": [
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.861111
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2116",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.444444
+      }
+    ],
+    "librechat#2120": [
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2110",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.285714
+      }
+    ],
+    "librechat#2121": [
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.848485
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.8
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2120",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.285714
+      }
+    ],
+    "librechat#2122": [
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.930556
+      },
+      {
+        "issueId": "librechat#2120",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.285714
+      }
+    ],
+    "librechat#2123": [
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.895833
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.583333
+      }
+    ],
+    "librechat#2124": [
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.852941
+      },
+      {
+        "issueId": "librechat#2116",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2122",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2110",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2120",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.444444
+      }
+    ],
+    "librechat#2125": [
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2120",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2116",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.444444
+      }
+    ],
+    "librechat#2126": [
+      {
+        "issueId": "librechat#2125",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2116",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.5
+      },
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.444444
+      }
+    ],
+    "librechat#2127": [
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2122",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2120",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.444444
+      }
+    ],
+    "librechat#2128": [
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.875
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2127",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.5
+      }
+    ],
+    "librechat#2129": [
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.814815
+      },
+      {
+        "issueId": "librechat#2116",
+        "rank": 0.814815
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2128",
+        "rank": 0.5
+      }
+    ],
+    "librechat#2130": [
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "librechat#2120",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2126",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2127",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2125",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2122",
+        "rank": 0.545455
+      }
+    ],
+    "librechat#2131": [
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2127",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.5
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.285714
+      }
+    ],
+    "librechat#2132": [
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.871795
+      },
+      {
+        "issueId": "librechat#2120",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2122",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2125",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.545455
+      }
+    ],
+    "librechat#2133": [
+      {
+        "issueId": "librechat#2125",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2130",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2126",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2120",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.444444
+      }
+    ],
+    "librechat#2134": [
+      {
+        "issueId": "librechat#2133",
+        "rank": 0.861111
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2116",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.444444
+      }
+    ],
+    "librechat#2135": [
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2116",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2110",
+        "rank": 0.444444
+      }
+    ],
+    "librechat#2136": [
+      {
+        "issueId": "librechat#2116",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2135",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2130",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2125",
+        "rank": 0.444444
+      }
+    ],
+    "librechat#2137": [
+      {
+        "issueId": "librechat#2130",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2110",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2136",
+        "rank": 0.5
+      },
+      {
+        "issueId": "librechat#2135",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2133",
+        "rank": 0.285714
+      }
+    ],
+    "librechat#2138": [
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.83871
+      },
+      {
+        "issueId": "librechat#2131",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2127",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2132",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.5
+      },
+      {
+        "issueId": "librechat#2137",
+        "rank": 0.444444
+      }
+    ],
+    "librechat#2139": [
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2122",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2132",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2131",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2137",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2133",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.545455
+      }
+    ],
+    "librechat#2140": [
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "librechat#2131",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2139",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2135",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2128",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2137",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2132",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2116",
+        "rank": 0.444444
+      }
+    ],
+    "lobehub#4201": [],
+    "lobehub#4202": [
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.83871
+      }
+    ],
+    "lobehub#4203": [
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.821429
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.736842
+      }
+    ],
+    "lobehub#4204": [
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.912281
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.8
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.285714
+      }
+    ],
+    "lobehub#4205": [
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.8
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.782609
+      }
+    ],
+    "lobehub#4206": [
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.814815
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.615385
+      }
+    ],
+    "lobehub#4207": [
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.924242
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.444444
+      }
+    ],
+    "lobehub#4208": [
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.928571
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.285714
+      }
+    ],
+    "lobehub#4209": [
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.875
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.821429
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.444444
+      }
+    ],
+    "lobehub#4210": [
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.827586
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.821429
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.615385
+      }
+    ],
+    "lobehub#4211": [
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.444444
+      }
+    ],
+    "lobehub#4212": [
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.821429
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.8
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4210",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.444444
+      }
+    ],
+    "lobehub#4213": [
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.888889
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.285714
+      }
+    ],
+    "lobehub#4214": [
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.285714
+      }
+    ],
+    "lobehub#4215": [
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.833333
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.8
+      },
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.444444
+      }
+    ],
+    "lobehub#4216": [
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.897959
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4210",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.285714
+      }
+    ],
+    "lobehub#4217": [
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.833333
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4210",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.285714
+      }
+    ],
+    "lobehub#4218": [
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.857143
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.833333
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4217",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4210",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.444444
+      }
+    ],
+    "lobehub#4219": [
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4217",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4210",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.5
+      }
+    ],
+    "lobehub#4220": [
+      {
+        "issueId": "lobehub#4219",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4217",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.444444
+      }
+    ],
+    "lobehub#4221": [
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.827586
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.8
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4219",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4210",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4218",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.545455
+      }
+    ],
+    "lobehub#4222": [
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.857143
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4218",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4219",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "lobehub#4217",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.285714
+      }
+    ],
+    "lobehub#4223": [
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4219",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "lobehub#4218",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "lobehub#4210",
+        "rank": 0.285714
+      }
+    ],
+    "lobehub#4224": [
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.8
+      },
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4218",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4219",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.444444
+      }
+    ],
+    "lobehub#4225": [
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.5
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4210",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "lobehub#4222",
+        "rank": 0.285714
+      }
+    ],
+    "lobehub#4226": [
+      {
+        "issueId": "lobehub#4219",
+        "rank": 0.814815
+      },
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4217",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4222",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.444444
+      }
+    ],
+    "lobehub#4227": [
+      {
+        "issueId": "lobehub#4219",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4217",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4222",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.444444
+      }
+    ],
+    "lobehub#4228": [
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.893617
+      },
+      {
+        "issueId": "lobehub#4217",
+        "rank": 0.852941
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4210",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4224",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4218",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.444444
+      }
+    ],
+    "lobehub#4229": [
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.857143
+      },
+      {
+        "issueId": "lobehub#4222",
+        "rank": 0.821429
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4218",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.444444
+      }
+    ],
+    "lobehub#4230": [
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.827586
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "lobehub#4228",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4224",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4222",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.444444
+      }
+    ],
+    "lobehub#4231": [
+      {
+        "issueId": "lobehub#4230",
+        "rank": 0.880952
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4228",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4218",
+        "rank": 0.285714
+      }
+    ],
+    "lobehub#4232": [
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.814815
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4217",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4210",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4231",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.285714
+      }
+    ],
+    "lobehub#4233": [
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "lobehub#4219",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "lobehub#4232",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4231",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.5
+      },
+      {
+        "issueId": "lobehub#4222",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4218",
+        "rank": 0.444444
+      }
+    ],
+    "lobehub#4234": [
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "lobehub#4217",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4233",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "lobehub#4210",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "lobehub#4231",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4230",
+        "rank": 0.444444
+      }
+    ],
+    "lobehub#4235": [
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.878049
+      },
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4210",
+        "rank": 0.5
+      },
+      {
+        "issueId": "lobehub#4232",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4233",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "lobehub#4219",
+        "rank": 0.285714
+      }
+    ],
+    "lobehub#4236": [
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4224",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4219",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4231",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4230",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.545455
+      }
+    ],
+    "lobehub#4237": [
+      {
+        "issueId": "lobehub#4230",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4233",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "lobehub#4224",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "lobehub#4217",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "lobehub#4236",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.444444
+      }
+    ],
+    "lobehub#4238": [
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4210",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.545455
+      }
+    ],
+    "lobehub#4239": [
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "lobehub#4232",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "lobehub#4237",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4233",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "lobehub#4238",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.5
+      }
+    ],
+    "lobehub#4240": [
+      {
+        "issueId": "lobehub#4235",
+        "rank": 0.827586
+      },
+      {
+        "issueId": "lobehub#4222",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4239",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4238",
+        "rank": 0.285714
+      }
+    ],
+    "support-01": [
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2130",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2132",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2128",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2120",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2140",
+        "rank": 0.285714
+      }
+    ],
+    "support-02": [
+      {
+        "issueId": "librechat#2125",
+        "rank": 0.926471
+      },
+      {
+        "issueId": "librechat#2135",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2138",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2128",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "librechat#2126",
+        "rank": 0.285714
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.285714
+      }
+    ],
+    "support-03": [
+      {
+        "issueId": "librechat#2127",
+        "rank": 0.929577
+      },
+      {
+        "issueId": "librechat#2138",
+        "rank": 0.861111
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.8
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2133",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2122",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.444444
+      }
+    ],
+    "support-04": [
+      {
+        "issueId": "librechat#2137",
+        "rank": 0.852941
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2110",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2131",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2133",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2140",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2139",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2138",
+        "rank": 0.285714
+      }
+    ],
+    "support-05": [
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.913793
+      },
+      {
+        "issueId": "librechat#2133",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2130",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2125",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2127",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2126",
+        "rank": 0.444444
+      }
+    ],
+    "support-06": [
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.861111
+      },
+      {
+        "issueId": "librechat#2125",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "librechat#2130",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2140",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2131",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2133",
+        "rank": 0.5
+      },
+      {
+        "issueId": "librechat#2136",
+        "rank": 0.444444
+      }
+    ],
+    "support-07": [
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.891304
+      },
+      {
+        "issueId": "librechat#2135",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2136",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2140",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2125",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2116",
+        "rank": 0.615385
+      }
+    ],
+    "support-08": [
+      {
+        "issueId": "librechat#2120",
+        "rank": 0.848485
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2138",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2127",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2132",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2130",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2122",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2135",
+        "rank": 0.285714
+      }
+    ],
+    "support-09": [
+      {
+        "issueId": "librechat#2126",
+        "rank": 0.883721
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2140",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2130",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.5
+      },
+      {
+        "issueId": "librechat#2139",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.444444
+      }
+    ],
+    "support-10": [
+      {
+        "issueId": "librechat#2132",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.5
+      },
+      {
+        "issueId": "librechat#2128",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2120",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.444444
+      }
+    ],
+    "support-11": [
+      {
+        "issueId": "librechat#2135",
+        "rank": 0.926471
+      },
+      {
+        "issueId": "librechat#2125",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2130",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.545455
+      }
+    ],
+    "support-12": [
+      {
+        "issueId": "librechat#2110",
+        "rank": 0.857143
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.848485
+      },
+      {
+        "issueId": "librechat#2133",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "librechat#2125",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "librechat#2137",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2136",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2135",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.666667
+      }
+    ],
+    "support-13": [
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.888889
+      },
+      {
+        "issueId": "librechat#2139",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2128",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2131",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2130",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.545455
+      }
+    ],
+    "support-14": [
+      {
+        "issueId": "lobehub#4238",
+        "rank": 0.916667
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.8
+      },
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4219",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4217",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4228",
+        "rank": 0.722222
+      }
+    ],
+    "support-15": [
+      {
+        "issueId": "lobehub#4240",
+        "rank": 0.901961
+      },
+      {
+        "issueId": "lobehub#4222",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4232",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "lobehub#4236",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4235",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4231",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.444444
+      }
+    ],
+    "support-16": [
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.939759
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.848485
+      },
+      {
+        "issueId": "lobehub#4222",
+        "rank": 0.83871
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4231",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4230",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.545455
+      }
+    ],
+    "support-17": [
+      {
+        "issueId": "lobehub#4217",
+        "rank": 0.94186
+      },
+      {
+        "issueId": "lobehub#4228",
+        "rank": 0.83871
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.8
+      },
+      {
+        "issueId": "lobehub#4234",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4219",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.666667
+      }
+    ],
+    "support-18": [
+      {
+        "issueId": "lobehub#4228",
+        "rank": 0.912281
+      },
+      {
+        "issueId": "lobehub#4217",
+        "rank": 0.878049
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.871795
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.871795
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "lobehub#4238",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4218",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4230",
+        "rank": 0.75
+      }
+    ],
+    "support-19": [
+      {
+        "issueId": "lobehub#4235",
+        "rank": 0.927536
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.84375
+      },
+      {
+        "issueId": "lobehub#4240",
+        "rank": 0.814815
+      },
+      {
+        "issueId": "lobehub#4224",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4237",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4239",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.545455
+      }
+    ],
+    "support-20": [
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.83871
+      },
+      {
+        "issueId": "lobehub#4231",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "lobehub#4237",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4233",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4234",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4224",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.615385
+      }
+    ],
+    "support-21": [
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.924242
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.833333
+      },
+      {
+        "issueId": "lobehub#4238",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4233",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4234",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4231",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4228",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4219",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4239",
+        "rank": 0.583333
+      }
+    ],
+    "support-22": [
+      {
+        "issueId": "lobehub#4233",
+        "rank": 0.9375
+      },
+      {
+        "issueId": "lobehub#4219",
+        "rank": 0.848485
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.83871
+      },
+      {
+        "issueId": "lobehub#4228",
+        "rank": 0.833333
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "lobehub#4236",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4238",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.705882
+      }
+    ],
+    "support-23": [
+      {
+        "issueId": "lobehub#4210",
+        "rank": 0.878049
+      },
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4231",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4230",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4237",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "lobehub#4236",
+        "rank": 0.444444
+      }
+    ],
+    "support-24": [
+      {
+        "issueId": "lobehub#4218",
+        "rank": 0.90566
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.821429
+      },
+      {
+        "issueId": "lobehub#4238",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4217",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4228",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4234",
+        "rank": 0.666667
+      }
+    ],
+    "support-25": [
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.871795
+      },
+      {
+        "issueId": "lobehub#4236",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4203",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4231",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4228",
+        "rank": 0.615385
+      }
+    ],
+    "support-26": [
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.8
+      },
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2136",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2122",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.5
+      },
+      {
+        "issueId": "librechat#2138",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2133",
+        "rank": 0.444444
+      }
+    ],
+    "support-27": [
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.895833
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.857143
+      },
+      {
+        "issueId": "lobehub#4222",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "lobehub#4234",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4233",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4228",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4231",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.545455
+      }
+    ],
+    "support-28": [
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.833333
+      },
+      {
+        "issueId": "librechat#2127",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2133",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2126",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2120",
+        "rank": 0.545455
+      }
+    ],
+    "support-29": [
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.833333
+      },
+      {
+        "issueId": "lobehub#4240",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "lobehub#4239",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4228",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4232",
+        "rank": 0.705882
+      }
+    ],
+    "support-30": [
+      {
+        "issueId": "librechat#2138",
+        "rank": 0.868421
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.857143
+      },
+      {
+        "issueId": "librechat#2127",
+        "rank": 0.821429
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2140",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2135",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2126",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.545455
+      }
+    ],
+    "support-31": [
+      {
+        "issueId": "lobehub#4232",
+        "rank": 0.861111
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4230",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4217",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4238",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4231",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.615385
+      }
+    ],
+    "support-32": [
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.814815
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.8
+      },
+      {
+        "issueId": "librechat#2133",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2138",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2140",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2137",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2136",
+        "rank": 0.444444
+      },
+      {
+        "issueId": "librechat#2135",
+        "rank": 0.444444
+      }
+    ],
+    "support-33": [
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.864865
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.857143
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.821429
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4234",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4232",
+        "rank": 0.705882
+      }
+    ],
+    "support-34": [
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.83871
+      },
+      {
+        "issueId": "librechat#2132",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2139",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2128",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2137",
+        "rank": 0.583333
+      }
+    ],
+    "support-35": [
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.83871
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.827586
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4238",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4234",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4228",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4233",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.642857
+      }
+    ],
+    "support-36": [
+      {
+        "issueId": "librechat#2128",
+        "rank": 0.880952
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.875
+      },
+      {
+        "issueId": "librechat#2132",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2138",
+        "rank": 0.545455
+      }
+    ],
+    "support-37": [
+      {
+        "issueId": "lobehub#4222",
+        "rank": 0.864865
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.848485
+      },
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4210",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4230",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4235",
+        "rank": 0.642857
+      }
+    ],
+    "support-38": [
+      {
+        "issueId": "librechat#2116",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "librechat#2136",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2125",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2133",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.615385
+      }
+    ],
+    "support-39": [
+      {
+        "issueId": "lobehub#4239",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "lobehub#4222",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4214",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4237",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4232",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4236",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4224",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "lobehub#4217",
+        "rank": 0.642857
+      }
+    ],
+    "support-40": [
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.821429
+      },
+      {
+        "issueId": "librechat#2139",
+        "rank": 0.8
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.8
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "librechat#2136",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2137",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2122",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2132",
+        "rank": 0.666667
+      }
+    ],
+    "support-41": [
+      {
+        "issueId": "lobehub#4234",
+        "rank": 0.868421
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.868421
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.848485
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.827586
+      },
+      {
+        "issueId": "lobehub#4231",
+        "rank": 0.8
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.8
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4230",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4228",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.705882
+      }
+    ],
+    "support-42": [
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "librechat#2127",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2138",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2137",
+        "rank": 0.545455
+      }
+    ],
+    "support-43": [
+      {
+        "issueId": "lobehub#4238",
+        "rank": 0.814815
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.814815
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.8
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4224",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4219",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4236",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4233",
+        "rank": 0.722222
+      }
+    ],
+    "support-44": [
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.871795
+      },
+      {
+        "issueId": "librechat#2135",
+        "rank": 0.821429
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2131",
+        "rank": 0.615385
+      }
+    ],
+    "support-45": [
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.857143
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.852941
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.833333
+      },
+      {
+        "issueId": "lobehub#4240",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "lobehub#4236",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "lobehub#4228",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "lobehub#4217",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.736842
+      }
+    ],
+    "support-46": [
+      {
+        "issueId": "librechat#2137",
+        "rank": 0.893617
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.84375
+      },
+      {
+        "issueId": "librechat#2135",
+        "rank": 0.827586
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.827586
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2103",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "librechat#2133",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2116",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2130",
+        "rank": 0.6875
+      }
+    ],
+    "support-47": [
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.833333
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "lobehub#4219",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4222",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4240",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4217",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4236",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.615385
+      }
+    ],
+    "support-48": [
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.893617
+      },
+      {
+        "issueId": "librechat#2115",
+        "rank": 0.857143
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.852941
+      },
+      {
+        "issueId": "librechat#2125",
+        "rank": 0.848485
+      },
+      {
+        "issueId": "librechat#2137",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2135",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.6875
+      }
+    ],
+    "support-49": [
+      {
+        "issueId": "lobehub#4237",
+        "rank": 0.84375
+      },
+      {
+        "issueId": "lobehub#4240",
+        "rank": 0.821429
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.814815
+      },
+      {
+        "issueId": "lobehub#4224",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4219",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4235",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.6875
+      }
+    ],
+    "support-50": [
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.857143
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.857143
+      },
+      {
+        "issueId": "librechat#2116",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2133",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2127",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2125",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2110",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.666667
+      }
+    ],
+    "support-51": [
+      {
+        "issueId": "lobehub#4222",
+        "rank": 0.8
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "lobehub#4237",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4240",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4235",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "lobehub#4224",
+        "rank": 0.545455
+      }
+    ],
+    "support-52": [
+      {
+        "issueId": "librechat#2126",
+        "rank": 0.833333
+      },
+      {
+        "issueId": "librechat#2116",
+        "rank": 0.827586
+      },
+      {
+        "issueId": "librechat#2112",
+        "rank": 0.8
+      },
+      {
+        "issueId": "librechat#2140",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "librechat#2127",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "librechat#2104",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.6875
+      }
+    ],
+    "support-53": [
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.864865
+      },
+      {
+        "issueId": "lobehub#4240",
+        "rank": 0.857143
+      },
+      {
+        "issueId": "lobehub#4201",
+        "rank": 0.83871
+      },
+      {
+        "issueId": "lobehub#4237",
+        "rank": 0.833333
+      },
+      {
+        "issueId": "lobehub#4209",
+        "rank": 0.8
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4235",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4228",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4224",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4210",
+        "rank": 0.75
+      }
+    ],
+    "support-54": [
+      {
+        "issueId": "librechat#2108",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2131",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2138",
+        "rank": 0.6875
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.666667
+      },
+      {
+        "issueId": "librechat#2127",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "librechat#2139",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2128",
+        "rank": 0.615385
+      }
+    ],
+    "support-55": [
+      {
+        "issueId": "lobehub#4219",
+        "rank": 0.852941
+      },
+      {
+        "issueId": "lobehub#4233",
+        "rank": 0.8
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.8
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.782609
+      },
+      {
+        "issueId": "lobehub#4215",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4205",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4238",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.705882
+      }
+    ],
+    "support-56": [
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.909091
+      },
+      {
+        "issueId": "librechat#2133",
+        "rank": 0.891304
+      },
+      {
+        "issueId": "librechat#2121",
+        "rank": 0.886364
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.871795
+      },
+      {
+        "issueId": "librechat#2137",
+        "rank": 0.84375
+      },
+      {
+        "issueId": "librechat#2135",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "librechat#2122",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "librechat#2130",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2118",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.75
+      }
+    ],
+    "support-57": [
+      {
+        "issueId": "lobehub#4212",
+        "rank": 0.886364
+      },
+      {
+        "issueId": "lobehub#4231",
+        "rank": 0.84375
+      },
+      {
+        "issueId": "lobehub#4221",
+        "rank": 0.814815
+      },
+      {
+        "issueId": "lobehub#4223",
+        "rank": 0.772727
+      },
+      {
+        "issueId": "lobehub#4202",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4236",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4234",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4228",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "lobehub#4208",
+        "rank": 0.705882
+      }
+    ],
+    "support-58": [
+      {
+        "issueId": "librechat#2138",
+        "rank": 0.75
+      },
+      {
+        "issueId": "librechat#2129",
+        "rank": 0.736842
+      },
+      {
+        "issueId": "librechat#2124",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2105",
+        "rank": 0.705882
+      },
+      {
+        "issueId": "librechat#2132",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2116",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2136",
+        "rank": 0.583333
+      },
+      {
+        "issueId": "librechat#2127",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "librechat#2126",
+        "rank": 0.545455
+      }
+    ],
+    "support-59": [
+      {
+        "issueId": "lobehub#4236",
+        "rank": 0.761905
+      },
+      {
+        "issueId": "lobehub#4211",
+        "rank": 0.75
+      },
+      {
+        "issueId": "lobehub#4222",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "lobehub#4226",
+        "rank": 0.642857
+      },
+      {
+        "issueId": "lobehub#4227",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4206",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "lobehub#4239",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4235",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4234",
+        "rank": 0.545455
+      },
+      {
+        "issueId": "lobehub#4229",
+        "rank": 0.545455
+      }
+    ],
+    "support-60": [
+      {
+        "issueId": "librechat#2109",
+        "rank": 0.84375
+      },
+      {
+        "issueId": "librechat#2133",
+        "rank": 0.821429
+      },
+      {
+        "issueId": "librechat#2131",
+        "rank": 0.807692
+      },
+      {
+        "issueId": "librechat#2106",
+        "rank": 0.791667
+      },
+      {
+        "issueId": "librechat#2117",
+        "rank": 0.722222
+      },
+      {
+        "issueId": "librechat#2140",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2111",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2102",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2101",
+        "rank": 0.615385
+      },
+      {
+        "issueId": "librechat#2136",
+        "rank": 0.583333
+      }
+    ]
+  }
+}

@@ -5,3 +5,9 @@
 export const TRIAGE_PRIORITIES = ["urgent", "high", "medium", "low", "wont_do"] as const;
 
 export type TriagePriority = (typeof TRIAGE_PRIORITIES)[number];
+
+/** The three-level gold label a triage priority is compared with. */
+export function goldLevel(priority: TriagePriority): "high" | "medium" | "low" {
+  if (priority === "urgent" || priority === "high") return "high";
+  return priority === "medium" ? "medium" : "low";
+}
