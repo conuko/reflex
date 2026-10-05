@@ -2,8 +2,10 @@ import { parseArgs } from "node:util";
 
 import type { JudgmentProviderId } from "@/lib/judgment/provider";
 
+import type { Condition } from "./conditions";
 import type { SplitPart } from "./split";
 
+import { CONDITIONS } from "./conditions";
 import { SPLIT_PARTS } from "./split";
 
 // Arguments of `pnpm eval:run`, parsed apart from the script so the rules are
@@ -19,6 +21,7 @@ const MAX_CONCURRENCY = 16;
 export type EvalArgs = {
   part: SplitPart;
   provider: JudgmentProviderId;
+  condition: Condition;
   only: ReportedQuestion[];
   /** Results file name without `.jsonl`; `null` picks one from the run. */
   run: string | null;
@@ -30,7 +33,7 @@ export class EvalArgsError extends Error {
 }
 
 export const EVAL_USAGE =
-  "Usage: pnpm eval:run --part dev|test [--provider jev|fake] [--only type,area] [--run <name>] [--concurrency <n>] [--confirm-test]";
+  "Usage: pnpm eval:run --part dev|test [--provider jev|fake] [--condition candidates|shuffled|oracle|no-candidates] [--only type,area] [--run <name>] [--concurrency <n>] [--confirm-test]";
 
 export function parseEvalArgs(argv: readonly string[]): EvalArgs {
   let values;
@@ -40,6 +43,7 @@ export function parseEvalArgs(argv: readonly string[]): EvalArgs {
       options: {
         part: { type: "string" },
         provider: { type: "string", default: "jev" },
+        condition: { type: "string", default: "candidates" },
         only: { type: "string", default: REPORTED_QUESTIONS.join(",") },
         run: { type: "string" },
         concurrency: { type: "string", default: "4" },
@@ -72,6 +76,7 @@ export function parseEvalArgs(argv: readonly string[]): EvalArgs {
   return {
     part,
     provider: oneOf(values.provider, PROVIDERS, "--provider"),
+    condition: oneOf(values.condition, CONDITIONS, "--condition"),
     only: [...new Set(only)],
     run: values.run ?? null,
     concurrency,

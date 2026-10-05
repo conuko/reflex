@@ -5,6 +5,8 @@ import { createHash } from "node:crypto";
 
 import type { NonGoal } from "@/lib/config/non-goals";
 
+import { seededRandom } from "@/lib/random";
+
 import { capText } from "./state";
 
 // Question set v1: every judgment answers these questions about one ticket in
@@ -305,21 +307,31 @@ const injection = noul(
 export function buildQuestions({
   candidates,
   nonGoals,
+  shuffleSeed = null,
 }: {
   candidates: readonly Candidate[];
   nonGoals: readonly NonGoal[];
+  /** Set only by the eval: permutes the options of every choice question and the candidates' order. */
+  shuffleSeed?: number | null;
 }): { questions: Questions; candidateMap: CandidateMap } {
   if (candidates.length > MAX_CANDIDATES) {
     throw new RangeError(`Expected at most ${MAX_CANDIDATES} candidates, got ${candidates.length}`);
   }
+  const shuffle =
+    shuffleSeed === null ? <T>(items: readonly T[]) => [...items] : shuffler(shuffleSeed);
+  const offered = shuffle(candidates);
   const candidateMap: CandidateMap = Object.fromEntries(
-    candidates.map((candidate, index) => [optionKey(index), candidate.issueId]),
+    offered.map((candidate, index) => [optionKey(index), candidate.issueId]),
   );
+  const options = (question: ChoiceQuestion): ChoiceQuestion => ({
+    ...question,
+    criteria: Object.fromEntries(shuffle(Object.entries(question.criteria))),
+  });
 
   const questions: Record<string, NoulQuestion | ChoiceQuestion | ScoreQuestion> = {
-    type: ticketType,
-    area,
-    reach,
+    type: options(ticketType),
+    area: options(area),
+    reach: options(reach),
     blocked,
     workaround,
     data_exposure: dataExposure,
@@ -327,7 +339,7 @@ export function buildQuestions({
     regression,
     frustration,
   };
-  if (candidates.length > 0) questions.duplicate_of = duplicateOf(candidates);
+  if (offered.length > 0) questions.duplicate_of = duplicateOf(offered);
   for (const nonGoal of nonGoals)
     questions[nonGoalQuestionId(nonGoal.id)] = nonGoalQuestion(nonGoal);
   questions.injection = injection;
@@ -389,6 +401,19 @@ const HASH_CANDIDATE: Candidate = {
 export function questionSetHash(nonGoals: readonly NonGoal[]): string {
   const { questions } = buildQuestions({ candidates: [HASH_CANDIDATE], nonGoals });
   return createHash("sha256").update(JSON.stringify(questions)).digest("hex").slice(0, 16);
+}
+
+// Fisher-Yates over a seeded generator, so a shuffled eval run is reproducible.
+function shuffler(seed: number) {
+  const next = seededRandom(seed);
+  return <T>(items: readonly T[]): T[] => {
+    const copy = [...items];
+    for (let i = copy.length - 1; i > 0; i--) {
+      const j = Math.floor(next() * (i + 1));
+      [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    return copy;
+  };
 }
 
 /** The duplicate question's option key for the candidate at `index`. */

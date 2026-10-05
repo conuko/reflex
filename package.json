@@ -27,7 +27,7 @@
     "eval:run": "tsx --env-file-if-exists=.env eval/run-eval.ts",
     "eval:candidates": "tsx --env-file-if-exists=.env eval/snapshot-candidates.ts",
     "eval:fts": "tsx --env-file-if-exists=.env eval/fts-recall.ts",
-    "eval:report": "tsx scripts/pending.ts M3",
+    "eval:report": "tsx --env-file-if-exists=.env eval/report.ts",
     "eval:import": "tsx scripts/pending.ts M5",
     "seed:demo": "tsx scripts/pending.ts M4",
     "demo:simulate-incident": "tsx scripts/pending.ts M4",

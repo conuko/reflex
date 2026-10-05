@@ -1,9 +1,10 @@
-// `pnpm eval:run --part dev [--provider jev|fake] [--only type,area]`: asks a
-// judgment provider about every item of one split part and prints accuracy and
-// a confusion matrix per question. Results go to eval/results/<run>.jsonl, one
-// line per item; rerunning the same command resumes a stopped run. M1 sends no
-// duplicate candidates (no database yet), so the run's condition is
-// `no-candidates`.
+// `pnpm eval:run --part dev [--provider jev|fake] [--condition candidates]`:
+// asks a judgment provider about every item of one split part under one
+// condition (src/lib/eval/conditions.ts) and prints type and area accuracy and
+// confusion matrices; `pnpm eval:report` reports the rest. Results go to
+// eval/results/<run>.jsonl, one line per item; rerunning the same command
+// resumes a stopped run. Candidates come from the committed snapshot, so no
+// database is needed.
 
 import { existsSync } from "node:fs";
 import { join } from "node:path";
@@ -15,17 +16,19 @@ import type { Judgment, JudgmentProvider } from "@/lib/judgment/provider";
 
 import { NON_GOALS } from "@/lib/config/non-goals";
 import { scriptEnv } from "@/lib/env";
+import { readCandidateSnapshot } from "@/lib/eval/candidates-snapshot";
 import { EVAL_USAGE, EvalArgsError, parseEvalArgs } from "@/lib/eval/cli-args";
+import { judgmentInput, oracleChanges } from "@/lib/eval/conditions";
 import { accuracy, confusionMatrix } from "@/lib/eval/metrics";
 import { readRun, recordTestRun, runEval } from "@/lib/eval/runner";
 import { EVAL_SETS, loadEvalItems } from "@/lib/eval/sets";
 import { readSplit, SPLIT_VERSION, splitPart } from "@/lib/eval/split";
+import { loadIssueCorpus } from "@/lib/issue-corpus";
 import { createFakeProvider } from "@/lib/judgment/fake-provider";
 import { createJevClient, createJevProvider } from "@/lib/judgment/jev-provider";
 import { AREAS, QUESTION_SET_VERSION, questionSetHash, TICKET_TYPES } from "@/lib/triage/questions";
 
 const RESULTS_DIR = join(import.meta.dirname, "results");
-const CONDITION = "no-candidates";
 
 let args;
 try {
@@ -37,21 +40,32 @@ try {
 }
 
 const items = loadEvalItems();
+const sources = {
+  snapshot: readCandidateSnapshot(),
+  issues: new Map(loadIssueCorpus().map((issue) => [issue.id, issue])),
+};
 const ids = new Set(splitPart(readSplit(), items, args.part));
 const partItems = items.filter(({ id }) => ids.has(id));
 
-const run = args.run ?? `${args.part}-${args.provider}-${QUESTION_SET_VERSION}-${CONDITION}`;
+const run = args.run ?? `${args.part}-${args.provider}-${QUESTION_SET_VERSION}-${args.condition}`;
 const file = join(RESULTS_DIR, `${run}.jsonl`);
 const header: RunHeader = {
   kind: "run",
   part: args.part,
   provider: args.provider,
-  condition: CONDITION,
+  condition: args.condition,
   questionSetVersion: QUESTION_SET_VERSION,
   questionSetHash: questionSetHash(NON_GOALS),
   splitVersion: SPLIT_VERSION,
   startedAt: new Date().toISOString(),
 };
+
+if (args.condition === "oracle" && oracleChanges(partItems, sources) === 0) {
+  console.log(
+    "The oracle condition offers the same candidates as the plain one for every item (recall@10 is 1.0 here); nothing to run.",
+  );
+  process.exit(0);
+}
 
 if (args.part === "test" && !existsSync(file)) {
   console.log(
@@ -72,6 +86,7 @@ const outcome = await runEval({
   header,
   items: partItems,
   provider: createProvider(args.provider),
+  inputFor: judgmentInput(args.condition, sources),
   concurrency: args.concurrency,
   signal: controller.signal,
   onResult: ({ id, error }) => {

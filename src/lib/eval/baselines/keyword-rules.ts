@@ -50,6 +50,8 @@ export type KeywordAnswers = {
   injection: boolean;
   /** The non-goal with the most matching keywords, if it has at least MIN_YES_HITS. */
   nonGoal: string | null;
+  /** Whether a keyword matched, rather than the fallback answering. */
+  matched: { type: boolean; area: boolean };
 };
 
 /** The labels the rules fall back to when no keyword matches: the dev majority. */
@@ -84,9 +86,12 @@ export function predictWithKeywords(
     .filter(({ count }) => count >= MIN_YES_HITS)
     .toSorted((a, b) => b.count - a.count)[0];
 
+  const type = best(TICKET_TYPES, (label) => hits(rules.type[label] ?? []));
+  const area = best(AREAS, (label) => hits(rules.area[label] ?? []));
   return {
-    type: best(TICKET_TYPES, (type) => hits(rules.type[type] ?? [])) ?? fallback.type,
-    area: best(AREAS, (area) => hits(rules.area[area] ?? [])) ?? fallback.area,
+    type: type ?? fallback.type,
+    area: area ?? fallback.area,
+    matched: { type: type !== undefined, area: area !== undefined },
     injection: hits(rules.injection) >= MIN_YES_HITS,
     nonGoal: nonGoal?.id ?? null,
   };

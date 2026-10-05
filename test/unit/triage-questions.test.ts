@@ -1,3 +1,5 @@
+import type { Question } from "@typesafe-ai/sdk";
+
 import { describe, expect, it } from "vitest";
 
 import type { Candidate } from "@/lib/triage/questions";
@@ -125,5 +127,50 @@ describe("questionSetHash", () => {
     const edited = first ? [{ ...first, what: `${first.what} Edited.` }, ...rest] : [];
 
     expect(questionSetHash(edited)).not.toBe(questionSetHash(NON_GOALS));
+  });
+});
+
+function keys(question: Question | undefined): string[] {
+  if (question?.type !== "choice") throw new Error("expected a choice question");
+  return Object.keys(question.criteria);
+}
+
+describe("buildQuestions with a shuffle seed", () => {
+  const many: Candidate[] = Array.from({ length: 6 }, (_, i) => ({
+    issueId: `iss_${i}`,
+    title: `Issue ${i}`,
+    excerpt: `Excerpt ${i}.`,
+    state: "open",
+  }));
+  const shuffled = (seed: number) =>
+    buildQuestions({ candidates: many, nonGoals: NON_GOALS, shuffleSeed: seed });
+
+  it("offers the same options and candidates in another order", () => {
+    const plain = buildQuestions({ candidates: many, nonGoals: NON_GOALS });
+    const { questions, candidateMap } = shuffled(7);
+
+    for (const id of ["type", "area", "reach"]) {
+      expect(keys(questions[id]).toSorted()).toEqual(keys(plain.questions[id]).toSorted());
+    }
+    expect(Object.values(candidateMap).toSorted()).toEqual(many.map(({ issueId }) => issueId));
+    expect([keys(questions.area), Object.values(candidateMap)]).not.toEqual([
+      keys(plain.questions.area),
+      Object.values(plain.candidateMap),
+    ]);
+  });
+
+  it("keeps each option key pointing at the candidate it shows", () => {
+    const { questions, candidateMap } = shuffled(7);
+    const duplicate = questions.duplicate_of;
+    if (duplicate?.type !== "choice") throw new Error("expected the duplicate question");
+
+    for (const [key, issueId] of Object.entries(candidateMap)) {
+      expect(duplicate.criteria[key]).toMatchObject({ title: `Issue ${issueId.slice(4)}` });
+    }
+  });
+
+  it("is the same for the same seed and keeps none last", () => {
+    expect(shuffled(3)).toEqual(shuffled(3));
+    expect(keys(shuffled(3).questions.duplicate_of).at(-1)).toBe("none");
   });
 });

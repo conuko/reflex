@@ -7,6 +7,7 @@ describe("parseEvalArgs", () => {
     expect(parseEvalArgs(["--part", "dev"])).toEqual({
       part: "dev",
       provider: "jev",
+      condition: "candidates",
       only: ["type", "area"],
       run: null,
       concurrency: 4,
@@ -18,11 +19,19 @@ describe("parseEvalArgs", () => {
       parseEvalArgs([
         "--part=dev",
         "--provider=fake",
+        "--condition=shuffled",
         "--only=area,area",
         "--run=dev-try.2",
         "--concurrency=1",
       ]),
-    ).toEqual({ part: "dev", provider: "fake", only: ["area"], run: "dev-try.2", concurrency: 1 });
+    ).toEqual({
+      part: "dev",
+      provider: "fake",
+      condition: "shuffled",
+      only: ["area"],
+      run: "dev-try.2",
+      concurrency: 1,
+    });
   });
 
   it("refuses the test part unless it is confirmed", () => {
@@ -34,6 +43,7 @@ describe("parseEvalArgs", () => {
     ["no part", []],
     ["an unknown part", ["--part", "train"]],
     ["an unknown provider", ["--part", "dev", "--provider", "qwen"]],
+    ["an unknown condition", ["--part", "dev", "--condition", "noisy"]],
     ["an unknown question", ["--part", "dev", "--only", "type,priority"]],
     ["a concurrency of 0", ["--part", "dev", "--concurrency", "0"]],
     ["a concurrency above 16", ["--part", "dev", "--concurrency", "17"]],

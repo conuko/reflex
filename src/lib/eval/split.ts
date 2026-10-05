@@ -103,8 +103,9 @@ export function serializeSplit(split: Split): string {
   return `${JSON.stringify(split, null, 2)}\n`;
 }
 
-// Connected components over duplicate edges and mirror pairs, each sorted.
-function groupItems(
+/** Connected components over duplicate edges and mirror pairs, each sorted: the units
+ * the split keeps together and the bootstrap resamples. */
+export function groupItems(
   items: readonly EvalItem[],
   mirrors: readonly (readonly [string, string])[],
 ): string[][] {

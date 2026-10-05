@@ -2,8 +2,12 @@ import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } fr
 import { dirname, join } from "node:path";
 import { z } from "zod";
 
-import type { Judgment, JudgmentProvider, JudgmentProviderId } from "@/lib/judgment/provider";
-import type { Candidate } from "@/lib/triage/questions";
+import type {
+  Judgment,
+  JudgmentInput,
+  JudgmentProvider,
+  JudgmentProviderId,
+} from "@/lib/judgment/provider";
 
 import type { EvalItem } from "./sets";
 import type { SplitPart } from "./split";
@@ -18,7 +22,7 @@ export type RunHeader = {
   kind: "run";
   part: SplitPart;
   provider: JudgmentProviderId;
-  /** How duplicate candidates were chosen, e.g. `no-candidates`. */
+  /** How the items were asked, e.g. `candidates` or `shuffled` (see conditions.ts). */
   condition: string;
   questionSetVersion: string;
   questionSetHash: string;
@@ -83,7 +87,7 @@ export async function runEval({
   header,
   items,
   provider,
-  candidates = () => [],
+  inputFor = (item) => ({ ticket: item.ticket, candidates: [] }),
   concurrency = 4,
   signal,
   onResult,
@@ -92,7 +96,8 @@ export async function runEval({
   header: RunHeader;
   items: readonly EvalItem[];
   provider: JudgmentProvider;
-  candidates?: (item: EvalItem) => readonly Candidate[];
+  /** What to send for an item; by default the ticket without candidates. */
+  inputFor?: (item: EvalItem) => JudgmentInput;
   concurrency?: number;
   signal?: AbortSignal;
   onResult?: (result: { id: string; error?: string }) => void;
@@ -122,10 +127,7 @@ export async function runEval({
       try {
         // Each worker judges one item at a time; `concurrency` workers run side by side.
         // oxlint-disable-next-line eslint/no-await-in-loop
-        const judgment = await provider.judge(
-          { ticket: item.ticket, candidates: candidates(item) },
-          { signal },
-        );
+        const judgment = await provider.judge(inputFor(item), { signal });
         const ms = Math.round(performance.now() - started);
         const record: ItemRecord = { kind: "item", id: item.id, ms, judgment };
         // Synchronous, so lines from parallel workers never interleave.

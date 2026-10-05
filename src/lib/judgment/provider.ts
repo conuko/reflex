@@ -19,6 +19,8 @@ export type JudgmentInput = {
   ticket: TicketInput;
   /** Existing issues offered as possible originals, best match first. */
   candidates: readonly Candidate[];
+  /** Eval only: permutes the options and candidates (see `buildQuestions`). */
+  shuffleSeed?: number | null;
 };
 
 export type Judgment = {
@@ -53,11 +55,15 @@ export type SendRequest = (
 // question text and read the answers the same way; only `send` differs.
 export async function judgeTicket(
   provider: JudgmentProviderId,
-  { ticket, candidates }: JudgmentInput,
+  { ticket, candidates, shuffleSeed = null }: JudgmentInput,
   send: SendRequest,
 ): Promise<Judgment> {
   const state = buildState(ticket);
-  const { questions, candidateMap } = buildQuestions({ candidates, nonGoals: NON_GOALS });
+  const { questions, candidateMap } = buildQuestions({
+    candidates,
+    nonGoals: NON_GOALS,
+    shuffleSeed,
+  });
   const { body, requestId } = await send({ state, questions });
   const { model, answers, usage } = parseJudgment(body, { candidateMap, nonGoals: NON_GOALS });
 
