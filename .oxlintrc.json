@@ -48,7 +48,7 @@
     "import/no-unassigned-import": [
       "warn",
       {
-        "allow": ["**/*.css"]
+        "allow": ["**/*.css", "server-only"]
       }
     ],
     "typescript/consistent-type-imports": "error",
@@ -67,6 +67,56 @@
       "files": ["*.config.{js,mjs,cjs,ts,mts}"],
       "rules": {
         "import/no-anonymous-default-export": "off"
+      }
+    },
+    {
+      "files": ["src/lib/**", "src/worker/**"],
+      "rules": {
+        "eslint/no-restricted-imports": [
+          "error",
+          {
+            "paths": [
+              {
+                "name": "next",
+                "message": "src/lib and src/worker stay framework-free so the worker and CLI scripts can run them. Keep Next code in src/app or src/server."
+              },
+              {
+                "name": "react",
+                "message": "src/lib and src/worker stay framework-free so the worker and CLI scripts can run them. Keep React code in src/app or src/components."
+              },
+              {
+                "name": "react-dom",
+                "message": "src/lib and src/worker stay framework-free so the worker and CLI scripts can run them. Keep React code in src/app or src/components."
+              },
+              {
+                "name": "server-only",
+                "message": "server-only throws outside Next, which would break the worker, the CLI scripts and the tests. Only src/server may import it."
+              }
+            ],
+            "patterns": [
+              {
+                "group": ["next/**"],
+                "message": "src/lib and src/worker stay framework-free so the worker and CLI scripts can run them. Keep Next code in src/app or src/server."
+              },
+              {
+                "group": ["react/**", "react-dom/**"],
+                "message": "src/lib and src/worker stay framework-free so the worker and CLI scripts can run them. Keep React code in src/app or src/components."
+              },
+              {
+                "group": ["@/app/**", "**/app/**"],
+                "message": "src/lib and src/worker can't depend on the Next app. Move the shared logic into src/lib and import it from the app instead."
+              },
+              {
+                "group": ["@/components/**", "**/components/**"],
+                "message": "src/lib and src/worker can't depend on UI components. Move the shared logic into src/lib and import it from the component instead."
+              },
+              {
+                "group": ["@/server/**", "**/server/**"],
+                "message": "src/server holds Next-only singletons that import server-only. Move the shared logic into src/lib and import it from src/server instead."
+              }
+            ]
+          }
+        ]
       }
     }
   ],

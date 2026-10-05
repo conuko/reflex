@@ -14,7 +14,7 @@
     "fmt:check": "oxfmt --check",
     "typecheck": "next typegen && tsc --noEmit",
     "check": "oxfmt --check && oxlint --deny-warnings && pnpm typecheck && pnpm check:terms",
-    "check:terms": "tsx scripts/pending.ts 02 --warn-only",
+    "check:terms": "tsx --env-file-if-exists=.env scripts/check-terms.ts",
     "test": "vitest run",
     "test:unit": "vitest run --project unit",
     "test:integration": "vitest run --project integration",
