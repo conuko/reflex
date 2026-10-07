@@ -90,6 +90,10 @@ function withoutBlanks(source: EnvSource): EnvSource {
 function formatIssue(issue: z.core.$ZodIssue): string {
   const name = String(issue.path[0]);
   // Every present value is a string, so a type error means the variable is missing.
-  if (issue.code === "invalid_type") return `Missing environment variable ${name}`;
+  if (issue.code === "invalid_type") {
+    const hint =
+      name === "TYPESAFE_API_KEY" ? " (or set JUDGMENT_PROVIDER=fake to run without Jev)" : "";
+    return `Missing environment variable ${name}${hint}`;
+  }
   return `${name} ${issue.message}`;
 }

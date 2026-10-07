@@ -120,7 +120,7 @@ export const SIGNAL_LABELS: Record<string, string> = {
   dataLoss: "Data loss",
   injection: "Tries to instruct the triage",
   reach: "Reach",
-  spike: "Open incident for its group",
+  spike: "Open incident",
   demand: "Demand on the linked issue",
   plan: "Workspace plan",
   type: "Type",

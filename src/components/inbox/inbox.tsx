@@ -300,7 +300,7 @@ function Row({
               {row.workspace.plan === "enterprise" && <Badge variant="secondary">Enterprise</Badge>}
             </>
           )}
-          <span className="w-8 text-right tabular-nums" suppressHydrationWarning>
+          <span className="w-8 text-right whitespace-nowrap tabular-nums" suppressHydrationWarning>
             {timeAgo(row.createdAt)}
           </span>
         </span>

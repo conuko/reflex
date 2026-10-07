@@ -66,6 +66,12 @@ describe("parseWorkerEnv", () => {
     ).toThrow("Missing environment variable TYPESAFE_API_KEY");
   });
 
+  it("says how to run the worker without a key", () => {
+    expect(() => parseWorkerEnv({ ...worker, TYPESAFE_API_KEY: "" })).toThrow(
+      "or set JUDGMENT_PROVIDER=fake",
+    );
+  });
+
   it("requires TYPESAFE_API_KEY when JUDGMENT_PROVIDER is left out", () => {
     expect(() => parseWorkerEnv({ ...worker, TYPESAFE_API_KEY: "" })).toThrow(
       "Missing environment variable TYPESAFE_API_KEY",

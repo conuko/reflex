@@ -1,6 +1,7 @@
 // `pnpm eval:report --part dev|test`: turns the committed Jev runs of one part
 // into eval/results/summary-<part>.md and report-<part>.json (the app imports
-// the JSON in M5). No model calls. It reads, for the current question set:
+// the JSON in M5); for test, it also rewrites the README's results section.
+// No model calls. It reads, for the current question set:
 //   <part>-jev-<version>-candidates.jsonl    required
 //   <part>-jev-<version>-shuffled.jsonl      optional
 //   <part>-jev-<version>-candidates-2.jsonl  optional: the second, sequential run
@@ -13,6 +14,7 @@ import type { Run } from "@/lib/eval/report";
 
 import { KEYWORD_RULES_VERSION, loadKeywordRules } from "@/lib/eval/baselines/keyword-rules";
 import { readCandidateSnapshot } from "@/lib/eval/candidates-snapshot";
+import { replaceReadmeResults } from "@/lib/eval/readme-results";
 import { buildReport } from "@/lib/eval/report";
 import { renderReport } from "@/lib/eval/report-markdown";
 import { readRun } from "@/lib/eval/runner";
@@ -62,6 +64,12 @@ const report = buildReport({
 const summary = join(RESULTS_DIR, `summary-${part}.md`);
 writeFileSync(summary, renderReport(report));
 writeFileSync(join(RESULTS_DIR, `report-${part}.json`), `${JSON.stringify(report, null, 2)}\n`);
-console.log(`wrote ${summary}\n`);
+console.log(`wrote ${summary}`);
+if (part === "test") {
+  const readme = join(import.meta.dirname, "../README.md");
+  writeFileSync(readme, replaceReadmeResults(readFileSync(readme, "utf8"), report));
+  console.log(`updated the results in ${readme}`);
+}
+console.log("");
 for (const { id, pass, value } of report.gate)
   console.log(`${pass ? "pass" : "FAIL"}  ${id.padEnd(20)} ${value}`);

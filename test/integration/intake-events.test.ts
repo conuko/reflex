@@ -179,11 +179,13 @@ describe("the token bucket", () => {
     });
 
     expect(await limiter.tryAcquire(800)).toBe(0);
+    // Measured from the first take: the bucket needs 600 ms to refill 600 tokens,
+    // however slowly the test itself runs.
+    const taken = Date.now();
     expect(await limiter.tryAcquire(800)).toBeGreaterThan(400);
-    const started = Date.now();
     await limiter.acquire(800);
 
-    expect(Date.now() - started).toBeGreaterThanOrEqual(400);
+    expect(Date.now() - taken).toBeGreaterThanOrEqual(550);
   });
 
   it("is shared by every limiter on the same key", async () => {

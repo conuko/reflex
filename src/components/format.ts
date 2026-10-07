@@ -8,7 +8,7 @@ const DAY = 24 * HOUR;
 
 export function timeAgo(iso: string, now: number = Date.now()): string {
   const elapsed = Math.max(0, now - new Date(iso).getTime());
-  if (elapsed < MINUTE) return "just now";
+  if (elapsed < MINUTE) return "now";
   if (elapsed < HOUR) return `${Math.floor(elapsed / MINUTE)}m`;
   if (elapsed < DAY) return `${Math.floor(elapsed / HOUR)}h`;
   return `${Math.floor(elapsed / DAY)}d`;
