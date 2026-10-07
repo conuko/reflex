@@ -96,6 +96,8 @@ Reflex has these pages and functions:
 | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
 | The policy editor previews which tickets a change moves                                | The evaluation page shows Jev next to plain code                                              |
 
+For a step-by-step tour of every page, with screenshots, see the [user guide](docs/user-guide/README.md).
+
 ### Keyboard shortcuts
 
 The inbox has these shortcuts:
