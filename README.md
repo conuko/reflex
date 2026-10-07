@@ -14,6 +14,7 @@ Every company, workspace, ticket and issue in Reflex is fictional.
 - [Results](#results)
 - [Features](#features)
 - [How it works](#how-it-works)
+- [Tech stack](#tech-stack)
 - [Getting started](#getting-started)
 - [Configuration](#configuration)
 - [Send tickets to Reflex](#send-tickets-to-reflex)
@@ -142,6 +143,23 @@ flowchart LR
 Jev decides nothing on its own. It only answers questions, and the policy, a pure TypeScript function, decides. This makes every priority explainable and lets a policy change recompute every ticket from the stored judgments without new Jev requests.
 
 Code does the work that Jev's [documented limits](https://docs.typesafe.ai/model-jaggedness/jev-1.13) advise against: counting tickets for incidents, adding up ARR for demand, comparing dates, and writing text. A new issue's title and body are copied from the ticket.
+
+## Tech stack
+
+Reflex is a TypeScript project. The app and the worker share one codebase and one database.
+
+| Layer          | Technology                                                | Used for                                                                      |
+| -------------- | --------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| App            | Next.js 16 (App Router), React 19 with the React Compiler | Pages, API routes, server actions and the Server-Sent Events endpoint         |
+| UI             | Tailwind CSS 4, shadcn/ui on Base UI, Lucide icons, cmdk  | Styling, components and the command palette                                   |
+| Client data    | TanStack Query                                            | Data fetching and live refresh in the browser                                 |
+| Database       | PostgreSQL 17, Prisma 7 with the `pg` driver adapter      | Tickets, judgments, policies and evaluation results; full-text search         |
+| Queue          | Redis 7, BullMQ, ioredis                                  | Triage and recompute jobs, live updates                                       |
+| Judgment       | TypeSafe SDK (`@typesafe-ai/sdk`), Jev (`jev-1.13.0`)     | The 14 questions about each ticket                                            |
+| Validation     | Zod 4                                                     | Environment variables, intake bodies, policies and Jev answers                |
+| Runtime        | Node.js 22.12 or later, tsx                               | The app, the worker and the scripts                                           |
+| Local services | Docker Compose                                            | Postgres and Redis                                                            |
+| Quality        | pnpm 11, Vitest, oxlint, oxfmt, TypeScript                | Packages, tests, lint, formatting and types (see [Development](#development)) |
 
 ## Getting started
 
@@ -343,16 +361,6 @@ pnpm eval:run --part dev --run dev-rerun
 ```
 
 The test tickets need `--confirm-test`, and every test run is logged in `eval/results/test-runs.jsonl`.
-
-### Tech stack
-
-Reflex uses:
-
-- Next.js 16 with React 19, Tailwind CSS 4, shadcn/ui and TanStack Query
-- PostgreSQL 17 with Prisma 7
-- Redis 7 with BullMQ for the job queues
-- The TypeSafe SDK (`@typesafe-ai/sdk`) for Jev
-- Vitest, oxlint and oxfmt
 
 ## Limitations
 
