@@ -5,7 +5,9 @@ import {
   InternalServerError,
   RateLimitError,
   TypeSafeClient,
+  TypeSafeError,
 } from "@typesafe-ai/sdk";
+import { ZodError } from "zod";
 
 import type { JudgmentProvider } from "./provider";
 
@@ -44,5 +46,17 @@ export function isRetryableJevError(error: unknown): boolean {
     error instanceof RateLimitError ||
     error instanceof InternalServerError ||
     error instanceof APIConnectionError
+  );
+}
+
+/**
+ * Errors that would fail the same way on every attempt: an SDK error that
+ * isn't retryable (a 4xx, a missing key), or a response or payload that
+ * doesn't fit its schema. Anything else, a database hiccup included, is worth
+ * retrying.
+ */
+export function isUnrecoverableError(error: unknown): boolean {
+  return (
+    (error instanceof TypeSafeError && !isRetryableJevError(error)) || error instanceof ZodError
   );
 }

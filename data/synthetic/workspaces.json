@@ -1,0 +1,325 @@
+{
+  "note": "Synthetic: 40 fictional companies made up for the Reflex demo. None of them is real; seats and ARR are invented (Business at $25 and Enterprise at $40 per seat per month).",
+  "workspaces": [
+    {
+      "id": "ws-01",
+      "name": "Alderbrook Freight",
+      "tracker": "librechat",
+      "plan": "business",
+      "seats": 20,
+      "arr": 6000
+    },
+    {
+      "id": "ws-02",
+      "name": "Brightwater Clinics",
+      "tracker": "librechat",
+      "plan": "free",
+      "seats": 9,
+      "arr": 0
+    },
+    {
+      "id": "ws-03",
+      "name": "Cedarline Insurance",
+      "tracker": "librechat",
+      "plan": "enterprise",
+      "seats": 967,
+      "arr": 464160
+    },
+    {
+      "id": "ws-04",
+      "name": "Dunmore Tooling",
+      "tracker": "librechat",
+      "plan": "free",
+      "seats": 3,
+      "arr": 0
+    },
+    {
+      "id": "ws-05",
+      "name": "Elmsworth Legal",
+      "tracker": "librechat",
+      "plan": "business",
+      "seats": 128,
+      "arr": 38400
+    },
+    {
+      "id": "ws-06",
+      "name": "Fernhollow Energy",
+      "tracker": "librechat",
+      "plan": "free",
+      "seats": 10,
+      "arr": 0
+    },
+    {
+      "id": "ws-07",
+      "name": "Glenrock Analytics",
+      "tracker": "librechat",
+      "plan": "business",
+      "seats": 182,
+      "arr": 54600
+    },
+    {
+      "id": "ws-08",
+      "name": "Harbourline Shipping",
+      "tracker": "librechat",
+      "plan": "free",
+      "seats": 4,
+      "arr": 0
+    },
+    {
+      "id": "ws-09",
+      "name": "Ivywood Learning",
+      "tracker": "librechat",
+      "plan": "free",
+      "seats": 2,
+      "arr": 0
+    },
+    {
+      "id": "ws-10",
+      "name": "Juniper Vale Foods",
+      "tracker": "librechat",
+      "plan": "enterprise",
+      "seats": 1933,
+      "arr": 927840
+    },
+    {
+      "id": "ws-11",
+      "name": "Kestrel Point Labs",
+      "tracker": "librechat",
+      "plan": "free",
+      "seats": 7,
+      "arr": 0
+    },
+    {
+      "id": "ws-12",
+      "name": "Larchmont Builders",
+      "tracker": "librechat",
+      "plan": "business",
+      "seats": 26,
+      "arr": 7800
+    },
+    {
+      "id": "ws-13",
+      "name": "Millbrook Retail",
+      "tracker": "librechat",
+      "plan": "free",
+      "seats": 12,
+      "arr": 0
+    },
+    {
+      "id": "ws-14",
+      "name": "Northgate Utilities",
+      "tracker": "librechat",
+      "plan": "business",
+      "seats": 80,
+      "arr": 24000
+    },
+    {
+      "id": "ws-15",
+      "name": "Oakhaven Health",
+      "tracker": "librechat",
+      "plan": "free",
+      "seats": 6,
+      "arr": 0
+    },
+    {
+      "id": "ws-16",
+      "name": "Pinecrest Media",
+      "tracker": "librechat",
+      "plan": "business",
+      "seats": 134,
+      "arr": 40200
+    },
+    {
+      "id": "ws-17",
+      "name": "Quarrystone Mining",
+      "tracker": "librechat",
+      "plan": "enterprise",
+      "seats": 862,
+      "arr": 413760
+    },
+    {
+      "id": "ws-18",
+      "name": "Ravenmoor Logistics",
+      "tracker": "librechat",
+      "plan": "free",
+      "seats": 9,
+      "arr": 0
+    },
+    {
+      "id": "ws-19",
+      "name": "Silverbirch Finance",
+      "tracker": "librechat",
+      "plan": "business",
+      "seats": 118,
+      "arr": 35400
+    },
+    {
+      "id": "ws-20",
+      "name": "Thornfield Hotels",
+      "tracker": "librechat",
+      "plan": "free",
+      "seats": 5,
+      "arr": 0
+    },
+    {
+      "id": "ws-21",
+      "name": "Umberly Textiles",
+      "tracker": "lobehub",
+      "plan": "business",
+      "seats": 172,
+      "arr": 51600
+    },
+    {
+      "id": "ws-22",
+      "name": "Valecroft Pharma",
+      "tracker": "lobehub",
+      "plan": "free",
+      "seats": 10,
+      "arr": 0
+    },
+    {
+      "id": "ws-23",
+      "name": "Westmere Telecom",
+      "tracker": "lobehub",
+      "plan": "enterprise",
+      "seats": 526,
+      "arr": 252480
+    },
+    {
+      "id": "ws-24",
+      "name": "Yarrowfield Farms",
+      "tracker": "lobehub",
+      "plan": "free",
+      "seats": 4,
+      "arr": 0
+    },
+    {
+      "id": "ws-25",
+      "name": "Ashcombe Engineering",
+      "tracker": "lobehub",
+      "plan": "business",
+      "seats": 86,
+      "arr": 25800
+    },
+    {
+      "id": "ws-26",
+      "name": "Birchgate Security",
+      "tracker": "lobehub",
+      "plan": "free",
+      "seats": 9,
+      "arr": 0
+    },
+    {
+      "id": "ws-27",
+      "name": "Coldspring Water",
+      "tracker": "lobehub",
+      "plan": "business",
+      "seats": 140,
+      "arr": 42000
+    },
+    {
+      "id": "ws-28",
+      "name": "Driftwood Studios",
+      "tracker": "lobehub",
+      "plan": "free",
+      "seats": 5,
+      "arr": 0
+    },
+    {
+      "id": "ws-29",
+      "name": "Easterbrook Savings",
+      "tracker": "lobehub",
+      "plan": "free",
+      "seats": 12,
+      "arr": 0
+    },
+    {
+      "id": "ws-30",
+      "name": "Foxglove Design",
+      "tracker": "lobehub",
+      "plan": "enterprise",
+      "seats": 1492,
+      "arr": 716160
+    },
+    {
+      "id": "ws-31",
+      "name": "Greyhaven Consulting",
+      "tracker": "lobehub",
+      "plan": "free",
+      "seats": 8,
+      "arr": 0
+    },
+    {
+      "id": "ws-32",
+      "name": "Hollowmere Robotics",
+      "tracker": "lobehub",
+      "plan": "business",
+      "seats": 178,
+      "arr": 53400
+    },
+    {
+      "id": "ws-33",
+      "name": "Ironbridge Steel",
+      "tracker": "lobehub",
+      "plan": "free",
+      "seats": 2,
+      "arr": 0
+    },
+    {
+      "id": "ws-34",
+      "name": "Lindenwood Schools",
+      "tracker": "lobehub",
+      "plan": "business",
+      "seats": 38,
+      "arr": 11400
+    },
+    {
+      "id": "ws-35",
+      "name": "Marbleton Realty",
+      "tracker": "lobehub",
+      "plan": "free",
+      "seats": 7,
+      "arr": 0
+    },
+    {
+      "id": "ws-36",
+      "name": "Netherby Aviation",
+      "tracker": "lobehub",
+      "plan": "business",
+      "seats": 92,
+      "arr": 27600
+    },
+    {
+      "id": "ws-37",
+      "name": "Orchardley Wines",
+      "tracker": "lobehub",
+      "plan": "enterprise",
+      "seats": 421,
+      "arr": 202080
+    },
+    {
+      "id": "ws-38",
+      "name": "Pebblestone Travel",
+      "tracker": "lobehub",
+      "plan": "free",
+      "seats": 10,
+      "arr": 0
+    },
+    {
+      "id": "ws-39",
+      "name": "Redcliffe Biotech",
+      "tracker": "lobehub",
+      "plan": "business",
+      "seats": 76,
+      "arr": 22800
+    },
+    {
+      "id": "ws-40",
+      "name": "Stonehurst Partners",
+      "tracker": "lobehub",
+      "plan": "free",
+      "seats": 4,
+      "arr": 0
+    }
+  ]
+}

@@ -1,5 +1,5 @@
-// Reflex's database. M2 adds only the existing issues; the triage tables come
-// with the pipeline (plan M4). The URLs live in prisma.config.ts.
+// Reflex's database: the existing issues (M2) and the triage pipeline (M4).
+// The URLs live in prisma.config.ts.
 
 generator client {
   provider = "prisma-client"
@@ -18,6 +18,8 @@ model Issue {
   id           String                   @id
   tracker      String
   number       Int
+  /// Where the issue came from: `corpus` (ADR-0002) or `app` (created from a ticket).
+  source       String                   @default("corpus")
   title        String
   body         String
   /// The issue this one duplicates; only canonical issues (null here) are offered as candidates.
@@ -26,7 +28,156 @@ model Issue {
   /// Open until then; a candidate's state is taken as of the ticket's time.
   closedAt     DateTime?                @db.Timestamptz(3)
   searchVector Unsupported("tsvector")?
+  links        TicketIssueLink[]
 
   @@unique([tracker, number])
   @@index([searchVector], type: Gin)
+}
+
+/// A customer of the platform. Synthetic, from data/synthetic/workspaces.json.
+model Workspace {
+  /// e.g. `ws-01`
+  id      String   @id
+  name    String
+  /// The tracker whose issues this workspace's tickets are matched against.
+  tracker String
+  /// free, business or enterprise
+  plan    String
+  seats   Int
+  /// Annual recurring revenue in USD.
+  arr     Int
+  tickets Ticket[]
+}
+
+/// A support ticket: a subject and a thread of messages.
+model Ticket {
+  id            String            @id @default(cuid())
+  /// The sender's id for the ticket; intake is idempotent on it.
+  externalId    String            @unique
+  /// seed, intake or try_it. Every `pnpm seed:demo` deletes all but seed tickets.
+  source        String
+  workspaceId   String
+  workspace     Workspace         @relation(fields: [workspaceId], references: [id])
+  subject       String
+  createdAt     DateTime          @db.Timestamptz(3)
+  /// For a corpus issue re-sent as a ticket: that issue, never offered as its own duplicate.
+  sourceIssueId String?
+  /// Set when a person chose the priority; recompute never changes such a ticket.
+  humanPriority String?
+  messages      Message[]
+  judgments     Judgment[]
+  triage        Triage?
+  links         TicketIssueLink[]
+  corrections   Correction[]
+
+  @@index([workspaceId])
+  @@index([createdAt])
+}
+
+model Message {
+  id         String   @id @default(cuid())
+  ticketId   String
+  ticket     Ticket   @relation(fields: [ticketId], references: [id], onDelete: Cascade)
+  /// 0 for the first message.
+  position   Int
+  /// The sender's id for the message, so a retried delivery adds nothing.
+  externalId String
+  /// customer or support
+  from       String
+  text       String
+  createdAt  DateTime @db.Timestamptz(3)
+
+  @@unique([ticketId, position])
+  @@unique([ticketId, externalId])
+}
+
+/// One judgment provider's answers for a ticket as it was then (ADR-0001).
+/// Stored raw and kept: every recompute starts from these.
+model Judgment {
+  id                 String   @id @default(cuid())
+  ticketId           String
+  ticket             Ticket   @relation(fields: [ticketId], references: [id], onDelete: Cascade)
+  provider           String
+  model              String
+  requestId          String?
+  questionSetVersion String
+  /// How many messages the ticket had when it was judged.
+  messageCount       Int
+  state              Json
+  candidateMap       Json
+  answers            Json
+  inputTokens        Int
+  outputTokens       Int
+  /// live (asked by the worker) or eval (copied from committed eval results by the seed).
+  origin             String
+  createdAt          DateTime @default(now()) @db.Timestamptz(3)
+  triages            Triage[]
+
+  @@index([ticketId, messageCount])
+}
+
+/// A ticket's current triage: what the policy made of its judgment.
+model Triage {
+  ticketId      String   @id
+  ticket        Ticket   @relation(fields: [ticketId], references: [id], onDelete: Cascade)
+  judgmentId    String
+  judgment      Judgment @relation(fields: [judgmentId], references: [id], onDelete: Cascade)
+  /// The judgment's message count; a triage is never replaced by one that covers fewer messages.
+  messageCount  Int
+  policyVersion Int
+  priority      String
+  ruleFired     String
+  needsReview   Boolean
+  reviewReasons String[]
+  squad         String
+  trace         Json
+  updatedAt     DateTime @updatedAt @db.Timestamptz(3)
+
+  @@index([priority])
+}
+
+/// A saved policy (ADR-0001). Versions are immutable: a trigger rejects updates.
+model Policy {
+  version   Int      @id
+  values    Json
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+}
+
+/// A ticket linked to an existing issue, by Jev's duplicate pick or by a person.
+model TicketIssueLink {
+  ticketId  String
+  ticket    Ticket   @relation(fields: [ticketId], references: [id], onDelete: Cascade)
+  issueId   String
+  issue     Issue    @relation(fields: [issueId], references: [id], onDelete: Cascade)
+  /// jev or human
+  origin    String
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+
+  @@id([ticketId, issueId])
+  @@index([issueId])
+}
+
+/// A person's change to a triage, kept as a record of where the policy or Jev was wrong.
+model Correction {
+  id        String   @id @default(cuid())
+  ticketId  String
+  ticket    Ticket   @relation(fields: [ticketId], references: [id], onDelete: Cascade)
+  field     String
+  fromValue String?
+  toValue   String
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+}
+
+/// A burst of related tickets (src/lib/spike.ts). At most one per group and window.
+model Incident {
+  id          String    @id @default(cuid())
+  /// `issue:<issue id>` or `area:<tracker>:<area>`
+  groupKey    String
+  windowStart DateTime  @db.Timestamptz(3)
+  openedAt    DateTime  @default(now()) @db.Timestamptz(3)
+  closedAt    DateTime? @db.Timestamptz(3)
+  ticketCount Int
+
+  @@unique([groupKey, windowStart])
+  @@index([closedAt])
 }

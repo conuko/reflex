@@ -1,0 +1,35 @@
+{
+  "note": "Hand-written, fictional tickets that `pnpm demo:simulate-incident` sends through signed intake: six customers of the librechat tracker reporting the same agent outage within minutes.",
+  "tickets": [
+    {
+      "workspaceId": "ws-01",
+      "subject": "Agents time out on every run",
+      "text": "Since about ten minutes ago every agent run in our workspace ends with 'Gateway timeout (504)' after 30 seconds. Chat without agents still works. Our dispatch team can't get anything done."
+    },
+    {
+      "workspaceId": "ws-03",
+      "subject": "All agent runs failing with 504",
+      "text": "None of our agents answer anymore. Each run spins for half a minute and then shows a 504 gateway timeout. This started just now for everyone in the company."
+    },
+    {
+      "workspaceId": "ws-05",
+      "subject": "Agent runs stuck, then gateway timeout",
+      "text": "Our contract review agent and our intake agent both fail with a gateway timeout on every run since a few minutes ago. Plain chat is fine. Is there an outage?"
+    },
+    {
+      "workspaceId": "ws-07",
+      "subject": "504 on every agent run",
+      "text": "Every agent run returns 504 Gateway Timeout right now. We tried three different agents and two browsers. Nothing has changed on our side."
+    },
+    {
+      "workspaceId": "ws-12",
+      "subject": "Agents are down for us",
+      "text": "All agent runs fail after about 30 seconds with a gateway timeout. The whole team is blocked; we rely on the agents for every customer request."
+    },
+    {
+      "workspaceId": "ws-15",
+      "subject": "Agent runs time out since a few minutes",
+      "text": "Agent runs have been timing out with error 504 for everyone in our workspace for the last few minutes. Chats without an agent still answer normally."
+    }
+  ]
+}
