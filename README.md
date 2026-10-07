@@ -2,7 +2,7 @@
 
 A support-ticket triage app that tests how well TypeSafe's Jev model classifies tickets, measured on labeled data.
 
-Reflex is the support inbox of a fictional B2B AI platform. Jev answers 14 questions about every new ticket. The questions cover the type, the product area, the number of people affected, the risk to data, and duplicates of known issues. A versioned policy in plain code turns these answers into a priority and a squad. The inbox shows the reason for each priority, rule by rule. An evaluation on 180 hand-labeled tickets measures how often Jev is right, next to what plain code gets on the same tickets.
+Reflex is the support inbox of a fictional B2B platform. Jev answers 14 questions about every new ticket. The questions cover the type, the product area, the number of people affected, the risk to data, and duplicates of known issues. A versioned policy in plain code turns these answers into a priority and a squad. The inbox shows the reason for each priority, rule by rule. An evaluation on 180 hand-labeled tickets measures how often Jev is right, next to what plain code gets on the same tickets.
 
 ![The Reflex inbox during an incident: six tickets about the same outage are Urgent, and the detail panel explains the priority rule by rule](docs/images/inbox.png)
 
