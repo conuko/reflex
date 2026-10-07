@@ -1,7 +1,7 @@
 import type { ChoiceSection, Rate, Report } from "./report";
 
+import { format, interval } from "./format";
 import { GATE_CHECKS, GATE_VERSION } from "./gate";
-import { format, interval } from "./report";
 
 // Renders the eval report as eval/results/summary-<part>.md. Every figure
 // shows k/n and its 95% interval; the baselines are plain code (ADR-0003).

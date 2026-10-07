@@ -96,10 +96,40 @@ function weightedKappa<L extends string>(
   return expected === 0 ? null : 1 - observed / expected;
 }
 
+export type CalibrationBin = {
+  n: number;
+  /** Mean probability of the bin's predictions. */
+  confidence: number;
+  /** Share of the bin's predictions that were right. */
+  accuracy: number;
+};
+
 /**
- * Expected calibration error over equal-mass bins: predictions sorted by
- * probability and cut into `bins` groups of (nearly) equal size, each
- * contributing its share times the gap between its accuracy and mean probability.
+ * Equal-mass bins: predictions sorted by probability and cut into `bins`
+ * groups of (nearly) equal size. Empty bins are left out.
+ */
+export function calibrationBins(
+  predictions: readonly { probability: number; correct: boolean }[],
+  bins = 5,
+): CalibrationBin[] {
+  const n = predictions.length;
+  const sorted = predictions.toSorted((a, b) => a.probability - b.probability);
+  const result: CalibrationBin[] = [];
+  for (let bin = 0; bin < bins; bin++) {
+    const members = sorted.slice(Math.round((bin * n) / bins), Math.round(((bin + 1) * n) / bins));
+    if (members.length === 0) continue;
+    result.push({
+      n: members.length,
+      confidence: members.reduce((sum, { probability }) => sum + probability, 0) / members.length,
+      accuracy: members.filter(({ correct }) => correct).length / members.length,
+    });
+  }
+  return result;
+}
+
+/**
+ * Expected calibration error over equal-mass bins (see `calibrationBins`):
+ * each bin contributes its share times the gap between its accuracy and mean probability.
  */
 export function expectedCalibrationError(
   predictions: readonly { probability: number; correct: boolean }[],
@@ -107,17 +137,10 @@ export function expectedCalibrationError(
 ): number | null {
   const n = predictions.length;
   if (n === 0) return null;
-  const sorted = predictions.toSorted((a, b) => a.probability - b.probability);
-  let error = 0;
-  for (let bin = 0; bin < bins; bin++) {
-    const members = sorted.slice(Math.round((bin * n) / bins), Math.round(((bin + 1) * n) / bins));
-    if (members.length === 0) continue;
-    const confidence =
-      members.reduce((sum, { probability }) => sum + probability, 0) / members.length;
-    const accuracy = members.filter(({ correct }) => correct).length / members.length;
-    error += (members.length / n) * Math.abs(accuracy - confidence);
-  }
-  return error;
+  return calibrationBins(predictions, bins).reduce(
+    (error, bin) => error + (bin.n / n) * Math.abs(bin.accuracy - bin.confidence),
+    0,
+  );
 }
 
 /** Mean squared gap between each probability and what happened (1 or 0). */

@@ -1,4 +1,5 @@
-// `pnpm seed:demo`: builds or restores the demo dataset (src/lib/seed-demo.ts).
+// `pnpm seed:demo`: builds or restores the demo dataset (src/lib/seed-demo.ts)
+// and imports the committed eval results for the evaluation screen.
 // Judgments come from earlier runs or the committed eval results, so it
 // normally makes 0 model calls and needs no key. Only an item with neither is
 // judged by the configured provider (JUDGMENT_PROVIDER, `jev` by default).
@@ -7,6 +8,7 @@ import type { JudgmentProvider } from "@/lib/judgment/provider";
 
 import { db } from "@/lib/db";
 import { scriptEnv } from "@/lib/env";
+import { importEvalResults } from "@/lib/eval/import";
 import { publishEvent } from "@/lib/events";
 import { createFakeProvider } from "@/lib/judgment/fake-provider";
 import { createJevClient, createJevProvider } from "@/lib/judgment/jev-provider";
@@ -29,6 +31,8 @@ try {
   console.log(
     `seeded ${outcome.tickets} tickets in ${outcome.workspaces} workspaces, ${outcome.links} duplicate links; judgments: ${reused} reused, ${fromResults} from committed eval results, ${asked} asked`,
   );
+  const imported = await importEvalResults(database);
+  console.log(`imported ${imported.runs} eval runs with ${imported.items} items`);
   await announce();
 } finally {
   await database.$disconnect();

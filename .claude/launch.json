@@ -19,6 +19,19 @@
         "3100"
       ],
       "port": 3100
+    },
+    {
+      "name": "web-preview",
+      "runtimeExecutable": "env",
+      "runtimeArgs": [
+        "DATABASE_URL=postgresql://reflex:reflex@localhost:5433/reflex_preview",
+        "REDIS_URL=redis://localhost:6380/2",
+        "pnpm",
+        "dev",
+        "--port",
+        "3200"
+      ],
+      "port": 3200
     }
   ]
 }

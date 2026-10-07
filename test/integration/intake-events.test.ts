@@ -41,7 +41,11 @@ const post = (body: string, signature: string | null = signBody(body, secret)) =
 
 const created = z.object({ ticketId: z.string() });
 
-/** How many connections are subscribed to the events channel. */
+/**
+ * How many connections are subscribed to the events channel. Pub/sub ignores
+ * the database number, so a running dev server counts too: compare with the
+ * count before the test.
+ */
 async function subscribers(): Promise<number> {
   const reply = await redis.pubsub("NUMSUB", EVENTS_CHANNEL);
   return Array.isArray(reply) ? Number(reply[1]) : 0;
@@ -101,6 +105,7 @@ describe("intake", () => {
 
 describe("the event stream", () => {
   it("streams published events after an open event, and unsubscribes when aborted", async () => {
+    const before = await subscribers();
     const controller = new AbortController();
     const stream = openEventStream({
       subscriber: testRedis(),
@@ -120,15 +125,34 @@ describe("the event stream", () => {
     };
 
     await read("event: open");
-    await waitFor(async () => (await subscribers()) === 1);
+    await waitFor(async () => (await subscribers()) === before + 1);
     await publishEvent(redis, { type: "ticket", ticketId: "t1" });
     await read('"ticketId":"t1"');
     await read(": heartbeat");
     controller.abort();
 
     expect(text).toContain('data: {"type":"ticket","ticketId":"t1"}');
-    await waitFor(async () => (await subscribers()) === 0);
+    await waitFor(async () => (await subscribers()) === before);
     expect((await reader.read()).done).toBe(true);
+  });
+});
+
+describe("the event stream, cancelled by its reader", () => {
+  it("unsubscribes when the reader goes away before the request is aborted", async () => {
+    const before = await subscribers();
+    const controller = new AbortController();
+    const reader = openEventStream({
+      subscriber: testRedis(),
+      signal: controller.signal,
+    }).getReader();
+    await reader.read();
+    await waitFor(async () => (await subscribers()) === before + 1);
+
+    await reader.cancel();
+    // A late abort after the cancel must not throw on the closed stream.
+    controller.abort();
+
+    await expect(waitFor(async () => (await subscribers()) === before)).resolves.toBe(true);
   });
 });
 

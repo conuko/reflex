@@ -114,6 +114,10 @@ async function store(
     }
     const known = ticket.messages.some(({ externalId: id }) => id === message.id);
     if (!known) {
+      // A new message is new information: a person's earlier "accept" no longer covers it.
+      if (ticket.acceptedAt) {
+        await tx.ticket.update({ where: { id: ticket.id }, data: { acceptedAt: null } });
+      }
       await tx.message.create({
         data: {
           ticketId: ticket.id,

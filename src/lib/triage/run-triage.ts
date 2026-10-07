@@ -148,7 +148,8 @@ export async function applyJudgment(
 /**
  * Inserts or replaces a ticket's triage in one statement, unless the ticket
  * has more messages than the judgment covers or its triage already covers
- * more. Returns whether a row was written.
+ * more. A changed priority keeps the one before, so the inbox can show what
+ * a policy save moved. Returns whether a row was written.
  */
 export async function writeTriage(
   database: Db,
@@ -183,6 +184,10 @@ export async function writeTriage(
       "reviewReasons" = EXCLUDED."reviewReasons",
       "squad" = EXCLUDED."squad",
       "trace" = EXCLUDED."trace",
+      "previousPriority" = CASE WHEN "Triage"."priority" <> EXCLUDED."priority"
+        THEN "Triage"."priority" ELSE "Triage"."previousPriority" END,
+      "priorityChangedAt" = CASE WHEN "Triage"."priority" <> EXCLUDED."priority"
+        THEN now() ELSE "Triage"."priorityChangedAt" END,
       "updatedAt" = now()
     WHERE "Triage"."messageCount" <= EXCLUDED."messageCount"
   `;

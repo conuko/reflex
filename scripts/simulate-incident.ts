@@ -3,12 +3,10 @@
 // as an outside system would. With `pnpm worker` running, the tickets are
 // triaged, the spike detector opens an incident, and they become Urgent.
 
-import { readFileSync } from "node:fs";
-import { join } from "node:path";
 import { parseArgs } from "node:util";
-import { z } from "zod";
 
 import { SIGNATURE_HEADER, signBody } from "@/lib/commands/intake";
+import { burstExternalId, loadIncidentBurst } from "@/lib/demo";
 import { scriptEnv } from "@/lib/env";
 
 const { values } = parseArgs({
@@ -18,20 +16,11 @@ const { values } = parseArgs({
 const baseUrl = values["base-url"].replace(/\/$/, "");
 const { INTAKE_WEBHOOK_SECRET } = scriptEnv("INTAKE_WEBHOOK_SECRET");
 
-const burst = z
-  .object({
-    note: z.string(),
-    tickets: z.array(z.object({ workspaceId: z.string(), subject: z.string(), text: z.string() })),
-  })
-  .parse(
-    JSON.parse(readFileSync(join(import.meta.dirname, "../data/demo/incident-burst.json"), "utf8")),
-  );
-
 // A fresh id per run, so every run is a new burst.
 const run = Date.now().toString(36);
-for (const [index, { workspaceId, subject, text }] of burst.tickets.entries()) {
+for (const [index, { workspaceId, subject, text }] of loadIncidentBurst().entries()) {
   const body = JSON.stringify({
-    externalId: `burst-${run}-${index + 1}`,
+    externalId: burstExternalId(run, index),
     workspaceId,
     subject,
     message: { id: "m1", from: "customer", text },

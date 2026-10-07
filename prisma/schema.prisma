@@ -1,4 +1,5 @@
-// Reflex's database: the existing issues (M2) and the triage pipeline (M4).
+// Reflex's database: the existing issues (M2), the triage pipeline (M4) and
+// the imported eval results (M5).
 // The URLs live in prisma.config.ts.
 
 generator client {
@@ -64,6 +65,8 @@ model Ticket {
   sourceIssueId String?
   /// Set when a person chose the priority; recompute never changes such a ticket.
   humanPriority String?
+  /// When a person confirmed the suggested triage; a new message clears it.
+  acceptedAt    DateTime?         @db.Timestamptz(3)
   messages      Message[]
   judgments     Judgment[]
   triage        Triage?
@@ -118,20 +121,23 @@ model Judgment {
 
 /// A ticket's current triage: what the policy made of its judgment.
 model Triage {
-  ticketId      String   @id
-  ticket        Ticket   @relation(fields: [ticketId], references: [id], onDelete: Cascade)
-  judgmentId    String
-  judgment      Judgment @relation(fields: [judgmentId], references: [id], onDelete: Cascade)
+  ticketId          String    @id
+  ticket            Ticket    @relation(fields: [ticketId], references: [id], onDelete: Cascade)
+  judgmentId        String
+  judgment          Judgment  @relation(fields: [judgmentId], references: [id], onDelete: Cascade)
   /// The judgment's message count; a triage is never replaced by one that covers fewer messages.
-  messageCount  Int
-  policyVersion Int
-  priority      String
-  ruleFired     String
-  needsReview   Boolean
-  reviewReasons String[]
-  squad         String
-  trace         Json
-  updatedAt     DateTime @updatedAt @db.Timestamptz(3)
+  messageCount      Int
+  policyVersion     Int
+  priority          String
+  ruleFired         String
+  needsReview       Boolean
+  reviewReasons     String[]
+  squad             String
+  trace             Json
+  /// The priority before the last change of priority, and when that was.
+  previousPriority  String?
+  priorityChangedAt DateTime? @db.Timestamptz(3)
+  updatedAt         DateTime  @updatedAt @db.Timestamptz(3)
 
   @@index([priority])
 }
@@ -180,4 +186,58 @@ model Incident {
 
   @@unique([groupKey, windowStart])
   @@index([closedAt])
+}
+
+/// One part's eval report (src/lib/eval/report.ts), imported by `pnpm eval:import`
+/// from eval/results/report-<part>.json, so the app shows the committed numbers.
+model EvalReport {
+  /// dev or test
+  part       String   @id
+  report     Json
+  importedAt DateTime @default(now()) @db.Timestamptz(3)
+}
+
+/// One committed eval run: a results file in eval/results/.
+model EvalRun {
+  /// The file name without `.jsonl`, e.g. `test-jev-v1-candidates`.
+  id                 String     @id
+  part               String
+  /// first, shuffled or second (the sequential repeat), as in the report.
+  role               String
+  condition          String
+  provider           String
+  model              String
+  questionSetVersion String
+  questionSetHash    String
+  splitVersion       String
+  startedAt          DateTime   @db.Timestamptz(3)
+  itemCount          Int
+  items              EvalItem[]
+}
+
+/// One eval item's answers in one run, next to its gold labels and the
+/// reference baselines' answers for the same state.
+model EvalItem {
+  id               String  @id @default(cuid())
+  runId            String
+  run              EvalRun @relation(fields: [runId], references: [id], onDelete: Cascade)
+  /// `librechat#2104` for a corpus issue; `support-01` or `adversarial-01` otherwise.
+  itemId           String
+  /// corpus, support or adversarial
+  set              String
+  tracker          String
+  gold             Json
+  state            Json
+  candidateMap     Json
+  answers          Json
+  baselines        Json
+  ms               Int
+  inputTokens      Int
+  outputTokens     Int
+  typeCorrect      Boolean
+  areaCorrect      Boolean
+  duplicateCorrect Boolean
+
+  @@unique([runId, itemId])
+  @@index([itemId])
 }

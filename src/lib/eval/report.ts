@@ -12,6 +12,7 @@ import { buildState } from "@/lib/triage/state";
 
 import type { KeywordAnswers, KeywordRules } from "./baselines/keyword-rules";
 import type { CandidateSnapshot } from "./candidates-snapshot";
+import type { Rate } from "./format";
 import type { GateCheckId } from "./gate";
 import type { ItemRecord, RunHeader } from "./runner";
 import type { EvalItem, EvalSet, Gold } from "./sets";
@@ -20,6 +21,7 @@ import type { Interval } from "./stats";
 import { ftsTop1 } from "./baselines/fts-top1";
 import { predictWithKeywords } from "./baselines/keyword-rules";
 import { majorityLabel } from "./baselines/majority";
+import { format, interval } from "./format";
 import { GATE_THRESHOLDS } from "./gate";
 import { confusionMatrix, recallAtK } from "./metrics";
 import { EVAL_SETS } from "./sets";
@@ -60,7 +62,7 @@ const SIGNALS = [
   "injection",
 ] as const;
 
-export type Rate = { k: number; n: number; value: number | null; ci: Interval | null };
+export type { Rate } from "./format";
 
 export type Run = { header: RunHeader; records: ItemRecord[] };
 
@@ -645,15 +647,18 @@ function costSection(run: Run): Report["cost"] {
   return { meanInputTokens, usdPer1000Tickets: jevCostUsd(meanInputTokens * 1_000) };
 }
 
+function beatsKeywords(section: ChoiceSection) {
+  return {
+    pass: (section.difference.ci?.low ?? 0) > 0,
+    value: `Jev ${format(section.jev)}, keyword rules ${format(section.keyword)}; difference ${signed(section.difference.value)} (${interval(section.difference.ci)})`,
+  };
+}
+
 function evaluateGate(report: Omit<Report, "gate">): Report["gate"] {
   const t = GATE_THRESHOLDS;
   const accuracy = (section: ChoiceSection, threshold: number) => ({
     pass: above(section.jev.value, threshold),
     value: format(section.jev),
-  });
-  const beatsKeywords = (section: ChoiceSection) => ({
-    pass: (section.difference.ci?.low ?? 0) > 0,
-    value: `Jev ${format(section.jev)}, keyword rules ${format(section.keyword)}; difference ${signed(section.difference.value)} (${interval(section.difference.ci)})`,
   });
   const { duplicates, injection } = report;
 
@@ -775,14 +780,6 @@ function groupsOf<T extends { id: string }>(
 
 function mean(values: readonly number[]): number | null {
   return values.length === 0 ? null : values.reduce((a, b) => a + b, 0) / values.length;
-}
-
-export function format({ k, n, value }: Rate): string {
-  return value === null ? "n/a" : `${k}/${n} = ${value.toFixed(2)}`;
-}
-
-export function interval(ci: Interval | null): string {
-  return ci === null ? "no interval" : `${ci.low.toFixed(2)}–${ci.high.toFixed(2)}`;
 }
 
 function signed(value: number | null): string {

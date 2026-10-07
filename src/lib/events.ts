@@ -23,6 +23,10 @@ export async function publishEvent(redis: Redis, event: ReflexEvent): Promise<vo
   await redis.publish(EVENTS_CHANNEL, JSON.stringify(eventSchema.parse(event)));
 }
 
+async function closeNothing() {
+  // The stream hasn't started.
+}
+
 /**
  * An SSE stream of events from a dedicated subscriber connection. The stream
  * sends a comment every `heartbeatMs` so proxies keep it open, and when
@@ -40,6 +44,7 @@ export function openEventStream({
 }): ReadableStream<Uint8Array> {
   const encoder = new TextEncoder();
   let heartbeat: ReturnType<typeof setInterval> | undefined;
+  let close: () => Promise<void> = closeNothing;
 
   return new ReadableStream<Uint8Array>({
     async start(controller) {
@@ -47,14 +52,19 @@ export function openEventStream({
       const send = (text: string) => {
         if (!closed) controller.enqueue(encoder.encode(text));
       };
-      const close = async () => {
+      close = async () => {
         if (closed) return;
         closed = true;
         clearInterval(heartbeat);
         subscriber.removeAllListeners("message");
         await subscriber.unsubscribe(EVENTS_CHANNEL).catch(() => undefined);
         subscriber.disconnect();
-        controller.close();
+        // The server may have closed the stream already when the browser went away.
+        try {
+          controller.close();
+        } catch {
+          // Already closed.
+        }
       };
 
       subscriber.on("message", (channel: string, message: string) => {
@@ -67,6 +77,10 @@ export function openEventStream({
 
       if (signal.aborted) await close();
       else signal.addEventListener("abort", () => void close(), { once: true });
+    },
+    // The reader went away before the request was aborted.
+    async cancel() {
+      await close();
     },
   });
 }
