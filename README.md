@@ -140,6 +140,8 @@ flowchart LR
 5. The policy combines the answers with facts that Jev never sees: the workspace's plan, open incidents, and the demand on the linked issue. The result is a priority, a squad, the reasons to send the ticket to review, and a trace of every rule it checked.
 6. The inbox gets a hint through Server-Sent Events and shows the result.
 
+To follow a ticket through these steps in the app, see the [user guide](docs/user-guide/README.md). Its [tutorial](docs/user-guide/tutorial.md) starts with reading a triage.
+
 Jev decides nothing on its own. It only answers questions, and the policy, a pure TypeScript function, decides. This makes every priority explainable and lets a policy change recompute every ticket from the stored judgments without new Jev requests.
 
 Code does the work that Jev's [documented limits](https://docs.typesafe.ai/model-jaggedness/jev-1.13) advise against: counting tickets for incidents, adding up ARR for demand, comparing dates, and writing text. A new issue's title and body are copied from the ticket.
